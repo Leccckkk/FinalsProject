@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btn_Back = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(12, 12);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(60, 20);
+            this.btn_Back.TabIndex = 4;
+            this.btn_Back.Text = "<- Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            // 
+            // StudentForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_Back);
+            this.Name = "StudentForm";
             this.Text = "StudentForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_Back;
     }
 }
