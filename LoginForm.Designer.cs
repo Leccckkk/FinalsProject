@@ -31,11 +31,9 @@
             this.btn_Login = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tb_Username = new System.Windows.Forms.TextBox();
-            this.btn_Register = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_Password = new System.Windows.Forms.TextBox();
-            this.linkforgot = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +41,7 @@
             // btn_Login
             // 
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Login.Location = new System.Drawing.Point(76, 233);
+            this.btn_Login.Location = new System.Drawing.Point(149, 231);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 23);
             this.btn_Login.TabIndex = 6;
@@ -66,20 +64,9 @@
             // 
             this.tb_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Username.Location = new System.Drawing.Point(46, 109);
-            this.tb_Username.Multiline = true;
             this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(289, 28);
+            this.tb_Username.Size = new System.Drawing.Size(289, 26);
             this.tb_Username.TabIndex = 1;
-            // 
-            // btn_Register
-            // 
-            this.btn_Register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Register.Location = new System.Drawing.Point(224, 233);
-            this.btn_Register.Name = "btn_Register";
-            this.btn_Register.Size = new System.Drawing.Size(75, 23);
-            this.btn_Register.TabIndex = 7;
-            this.btn_Register.Text = "Register";
-            this.btn_Register.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -107,30 +94,16 @@
             // 
             this.tb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Password.Location = new System.Drawing.Point(46, 184);
-            this.tb_Password.Multiline = true;
             this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(289, 28);
+            this.tb_Password.Size = new System.Drawing.Size(289, 26);
             this.tb_Password.TabIndex = 3;
-            // 
-            // linkforgot
-            // 
-            this.linkforgot.AutoSize = true;
-            this.linkforgot.LinkColor = System.Drawing.Color.Black;
-            this.linkforgot.Location = new System.Drawing.Point(141, 275);
-            this.linkforgot.Name = "linkforgot";
-            this.linkforgot.Size = new System.Drawing.Size(92, 13);
-            this.linkforgot.TabIndex = 9;
-            this.linkforgot.TabStop = true;
-            this.linkforgot.Text = "Forgot Password?";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.linkforgot);
             this.panel1.Controls.Add(this.tb_Password);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btn_Register);
             this.panel1.Controls.Add(this.tb_Username);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btn_Login);
@@ -160,11 +133,9 @@
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb_Username;
-        private System.Windows.Forms.Button btn_Register;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_Password;
-        private System.Windows.Forms.LinkLabel linkforgot;
         private System.Windows.Forms.Panel panel1;
     }
 }
