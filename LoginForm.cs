@@ -16,5 +16,17 @@ namespace FinalsProject
         {
             InitializeComponent();
         }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            AdminForm f2 = new AdminForm();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
