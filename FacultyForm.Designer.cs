@@ -134,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_logout);
             this.Name = "FacultyForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FacultyForm";
             this.Load += new System.EventHandler(this.FacultyForm_Load);
             this.panel1.ResumeLayout(false);

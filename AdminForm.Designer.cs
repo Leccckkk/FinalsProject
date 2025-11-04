@@ -48,6 +48,7 @@
             this.label1.Size = new System.Drawing.Size(142, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dashboard";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -61,6 +62,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1017, 48);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_reports
             // 
@@ -157,6 +159,7 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1017, 363);
             this.panelContainer.TabIndex = 3;
+            this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
             // AdminForm
             // 

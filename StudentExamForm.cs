@@ -14,13 +14,17 @@ namespace FinalsProject
 {
     public partial class ExamForm : Form
     {
-        public ExamForm()
+        private StudentEForm _studentEForm;
+        public ExamForm(StudentEForm studentForm)
         {
             InitializeComponent();
+            _studentEForm = studentForm;
+
+
         }
 
         int Number = 1, Score = 0;
-        string Subject = GlobalDataa.Subject;
+        string Subject = "Mathematics";
 
 
 
@@ -62,6 +66,19 @@ namespace FinalsProject
             }
         }
 
+        private void btn_Next_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_finish_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Exam Finished!");
+            _studentEForm.Disable();
+            _studentEForm.Show();
+            this.Close();
+        }
+
         private void btn_Next_Click(object sender, EventArgs e)
         {
             if (Number <= 10)
@@ -98,7 +115,7 @@ namespace FinalsProject
             else
             {
                 GlobalDataa.Subject = "";
-                StudentForm f4 = new StudentForm();
+                StudentEForm f4 = new StudentEForm();
                 f4.Show();
                 this.Hide();
             }

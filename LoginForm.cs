@@ -34,7 +34,7 @@ namespace FinalsProject
             }
             else if (LoginReturn == "Student")
             {
-                StudentForm f4 = new StudentForm();
+                StudentEForm f4 = new StudentEForm();
                 f4.Show();
                 this.Hide();
             }
