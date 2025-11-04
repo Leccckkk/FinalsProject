@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.gb_Choices = new System.Windows.Forms.GroupBox();
+            this.rb_Choice4 = new System.Windows.Forms.RadioButton();
+            this.rb_Choice3 = new System.Windows.Forms.RadioButton();
+            this.rb_Choice2 = new System.Windows.Forms.RadioButton();
+            this.rb_Choice1 = new System.Windows.Forms.RadioButton();
             this.txt_Number = new System.Windows.Forms.Label();
             this.txt_Question = new System.Windows.Forms.Label();
-            this.rb_Choice1 = new System.Windows.Forms.RadioButton();
-            this.rb_Choice2 = new System.Windows.Forms.RadioButton();
-            this.rb_Choice3 = new System.Windows.Forms.RadioButton();
-            this.rb_Choice4 = new System.Windows.Forms.RadioButton();
+            this.btn_Next = new System.Windows.Forms.Button();
             this.gb_Choices.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,50 @@
             this.gb_Choices.TabIndex = 0;
             this.gb_Choices.TabStop = false;
             this.gb_Choices.Text = "Choices";
+            // 
+            // rb_Choice4
+            // 
+            this.rb_Choice4.AutoSize = true;
+            this.rb_Choice4.Location = new System.Drawing.Point(30, 145);
+            this.rb_Choice4.Name = "rb_Choice4";
+            this.rb_Choice4.Size = new System.Drawing.Size(64, 17);
+            this.rb_Choice4.TabIndex = 3;
+            this.rb_Choice4.TabStop = true;
+            this.rb_Choice4.Text = "Choice4";
+            this.rb_Choice4.UseVisualStyleBackColor = true;
+            // 
+            // rb_Choice3
+            // 
+            this.rb_Choice3.AutoSize = true;
+            this.rb_Choice3.Location = new System.Drawing.Point(30, 107);
+            this.rb_Choice3.Name = "rb_Choice3";
+            this.rb_Choice3.Size = new System.Drawing.Size(64, 17);
+            this.rb_Choice3.TabIndex = 2;
+            this.rb_Choice3.TabStop = true;
+            this.rb_Choice3.Text = "Choice3";
+            this.rb_Choice3.UseVisualStyleBackColor = true;
+            // 
+            // rb_Choice2
+            // 
+            this.rb_Choice2.AutoSize = true;
+            this.rb_Choice2.Location = new System.Drawing.Point(30, 69);
+            this.rb_Choice2.Name = "rb_Choice2";
+            this.rb_Choice2.Size = new System.Drawing.Size(64, 17);
+            this.rb_Choice2.TabIndex = 1;
+            this.rb_Choice2.TabStop = true;
+            this.rb_Choice2.Text = "Choice2";
+            this.rb_Choice2.UseVisualStyleBackColor = true;
+            // 
+            // rb_Choice1
+            // 
+            this.rb_Choice1.AutoSize = true;
+            this.rb_Choice1.Location = new System.Drawing.Point(30, 31);
+            this.rb_Choice1.Name = "rb_Choice1";
+            this.rb_Choice1.Size = new System.Drawing.Size(64, 17);
+            this.rb_Choice1.TabIndex = 0;
+            this.rb_Choice1.TabStop = true;
+            this.rb_Choice1.Text = "Choice1";
+            this.rb_Choice1.UseVisualStyleBackColor = true;
             // 
             // txt_Number
             // 
@@ -69,60 +114,28 @@
             this.txt_Question.TabIndex = 2;
             this.txt_Question.Text = "Question";
             // 
-            // rb_Choice1
+            // btn_Next
             // 
-            this.rb_Choice1.AutoSize = true;
-            this.rb_Choice1.Location = new System.Drawing.Point(30, 31);
-            this.rb_Choice1.Name = "rb_Choice1";
-            this.rb_Choice1.Size = new System.Drawing.Size(64, 17);
-            this.rb_Choice1.TabIndex = 0;
-            this.rb_Choice1.TabStop = true;
-            this.rb_Choice1.Text = "Choice1";
-            this.rb_Choice1.UseVisualStyleBackColor = true;
-            // 
-            // rb_Choice2
-            // 
-            this.rb_Choice2.AutoSize = true;
-            this.rb_Choice2.Location = new System.Drawing.Point(30, 69);
-            this.rb_Choice2.Name = "rb_Choice2";
-            this.rb_Choice2.Size = new System.Drawing.Size(64, 17);
-            this.rb_Choice2.TabIndex = 1;
-            this.rb_Choice2.TabStop = true;
-            this.rb_Choice2.Text = "Choice2";
-            this.rb_Choice2.UseVisualStyleBackColor = true;
-            // 
-            // rb_Choice3
-            // 
-            this.rb_Choice3.AutoSize = true;
-            this.rb_Choice3.Location = new System.Drawing.Point(30, 107);
-            this.rb_Choice3.Name = "rb_Choice3";
-            this.rb_Choice3.Size = new System.Drawing.Size(64, 17);
-            this.rb_Choice3.TabIndex = 2;
-            this.rb_Choice3.TabStop = true;
-            this.rb_Choice3.Text = "Choice3";
-            this.rb_Choice3.UseVisualStyleBackColor = true;
-            // 
-            // rb_Choice4
-            // 
-            this.rb_Choice4.AutoSize = true;
-            this.rb_Choice4.Location = new System.Drawing.Point(30, 145);
-            this.rb_Choice4.Name = "rb_Choice4";
-            this.rb_Choice4.Size = new System.Drawing.Size(64, 17);
-            this.rb_Choice4.TabIndex = 3;
-            this.rb_Choice4.TabStop = true;
-            this.rb_Choice4.Text = "Choice4";
-            this.rb_Choice4.UseVisualStyleBackColor = true;
+            this.btn_Next.Location = new System.Drawing.Point(297, 355);
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.Size = new System.Drawing.Size(75, 23);
+            this.btn_Next.TabIndex = 3;
+            this.btn_Next.Text = "Next";
+            this.btn_Next.UseVisualStyleBackColor = true;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(384, 380);
+            this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.txt_Question);
             this.Controls.Add(this.txt_Number);
             this.Controls.Add(this.gb_Choices);
             this.Name = "ExamForm";
             this.Text = "StudentExamForm";
+            this.Load += new System.EventHandler(this.ExamForm_Load);
             this.gb_Choices.ResumeLayout(false);
             this.gb_Choices.PerformLayout();
             this.ResumeLayout(false);
@@ -139,5 +152,6 @@
         private System.Windows.Forms.RadioButton rb_Choice1;
         private System.Windows.Forms.Label txt_Number;
         private System.Windows.Forms.Label txt_Question;
+        private System.Windows.Forms.Button btn_Next;
     }
 }

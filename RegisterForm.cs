@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace FinalsProject
 {
-    public partial class StudentForm : Form
+    public partial class RegisterForm : Form
     {
-        public StudentForm()
+        public RegisterForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Login_Click(object sender, EventArgs e)
         {
-            GlobalDataa.Subject = comboBox1.SelectedItem.ToString();
-
-
-            ExamForm f1 = new ExamForm();
-            f1.Show();
-            this.Hide();
+            register.RegisterUser(tb_Username.Text, tb_Password.Text);
         }
     }
 }

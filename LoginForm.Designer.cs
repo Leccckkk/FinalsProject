@@ -35,13 +35,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tb_Password = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Login
             // 
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Login.Location = new System.Drawing.Point(149, 231);
+            this.btn_Login.Location = new System.Drawing.Point(83, 231);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 23);
             this.btn_Login.TabIndex = 6;
@@ -101,6 +102,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tb_Password);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -111,6 +113,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(398, 371);
             this.panel1.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(230, 231);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Register";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
@@ -137,6 +149,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_Password;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
