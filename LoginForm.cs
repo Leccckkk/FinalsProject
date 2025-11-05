@@ -22,18 +22,21 @@ namespace FinalsProject
             string LoginReturn = Login.CheckLogin(tb_Username.Text, tb_Password.Text);
             if (LoginReturn == "Admin")
             {
+                GlobalDataa.UserName = tb_Username.Text;
                 AdminForm f2 = new AdminForm();
                 f2.Show();
                 this.Hide();
             }
             else if (LoginReturn == "Faculty")
             {
+                GlobalDataa.UserName = tb_Username.Text;
                 FacultyForm f3 = new FacultyForm();
                 f3.Show();
                 this.Hide();
             }
             else if (LoginReturn == "Student")
             {
+                GlobalDataa.UserName = tb_Username.Text;
                 StudentEForm f4 = new StudentEForm();
                 f4.Show();
                 this.Hide();

@@ -21,5 +21,10 @@ namespace FinalsProject.StudentControls
         {
             
         }
+
+        private void ExamForm_Load(object sender, EventArgs e)
+        {
+            txt_StudName.Text = GlobalDataa.UserName;
+        }
     }
 }

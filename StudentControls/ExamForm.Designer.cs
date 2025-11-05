@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblts = new System.Windows.Forms.Label();
+            this.txt_StudName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,21 +50,21 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lblts);
+            this.panel1.Controls.Add(this.txt_StudName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(67, 142);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 10;
             // 
-            // lblts
+            // txt_StudName
             // 
-            this.lblts.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblts.Location = new System.Drawing.Point(56, 43);
-            this.lblts.Name = "lblts";
-            this.lblts.Size = new System.Drawing.Size(122, 23);
-            this.lblts.TabIndex = 1;
-            this.lblts.Text = "Rarara";
+            this.txt_StudName.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_StudName.Location = new System.Drawing.Point(56, 43);
+            this.txt_StudName.Name = "txt_StudName";
+            this.txt_StudName.Size = new System.Drawing.Size(122, 23);
+            this.txt_StudName.TabIndex = 1;
+            this.txt_StudName.Text = "StudentName";
             // 
             // label1
             // 
@@ -172,6 +172,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "ExamForm";
             this.Size = new System.Drawing.Size(1017, 420);
+            this.Load += new System.EventHandler(this.ExamForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -182,7 +183,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblts;
+        private System.Windows.Forms.Label txt_StudName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
