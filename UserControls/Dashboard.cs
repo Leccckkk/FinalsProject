@@ -12,6 +12,7 @@ namespace FinalsProject.UserControls
 {
     public partial class Dashboard : UserControl
     {
+        DataTable dt;
         public Dashboard()
         {
             InitializeComponent();
@@ -19,7 +20,25 @@ namespace FinalsProject.UserControls
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            LoadUsers();
+            LoadCountingStudents();
+            LoadSubjectCounts();
+        }
+        private void LoadUsers()
+        {
+            dt = UserManager.LoadUsers();
+            dt = QuestionManager.LoadQuestions();
+        }
+        private void LoadCountingStudents()
+        {
+            txtstudents.Text = UserManager.CountStudents("student").ToString();
+        }
+        private void LoadSubjectCounts()
+        {
+            txtquestions.Text = (QuestionManager.CountQuestionsBySubject("Mathematics")
+                + QuestionManager.CountQuestionsBySubject("English")
+                + QuestionManager.CountQuestionsBySubject("Science")
+                + QuestionManager.CountQuestionsBySubject("History")).ToString();
         }
     }
 }

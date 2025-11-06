@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblts = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,15 +50,24 @@
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Total Students";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblts);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(66, 101);
+            this.panel1.Location = new System.Drawing.Point(63, 74);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.Size = new System.Drawing.Size(235, 144);
             this.panel1.TabIndex = 5;
             // 
             // lblts
@@ -70,24 +79,15 @@
             this.lblts.TabIndex = 1;
             this.lblts.Text = "1";
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Total Students";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(294, 101);
+            this.panel2.Location = new System.Drawing.Point(429, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.Size = new System.Drawing.Size(235, 144);
             this.panel2.TabIndex = 6;
             // 
             // label2
@@ -114,9 +114,9 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(525, 101);
+            this.panel3.Location = new System.Drawing.Point(818, 74);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.Size = new System.Drawing.Size(235, 144);
             this.panel3.TabIndex = 7;
             // 
             // label4
@@ -143,9 +143,9 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Location = new System.Drawing.Point(751, 101);
+            this.panel4.Location = new System.Drawing.Point(1186, 74);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 100);
+            this.panel4.Size = new System.Drawing.Size(235, 144);
             this.panel4.TabIndex = 8;
             // 
             // label6
@@ -172,9 +172,9 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(66, 233);
+            this.panel5.Location = new System.Drawing.Point(63, 292);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(885, 100);
+            this.panel5.Size = new System.Drawing.Size(1358, 225);
             this.panel5.TabIndex = 9;
             // 
             // label8
@@ -208,7 +208,7 @@
             this.Controls.Add(this.panel5);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Dashboard";
-            this.Size = new System.Drawing.Size(1017, 420);
+            this.Size = new System.Drawing.Size(1484, 591);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -221,9 +221,9 @@
 
         #endregion
 
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblts;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

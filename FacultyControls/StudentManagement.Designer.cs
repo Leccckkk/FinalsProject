@@ -29,15 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coluser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colexam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colscore = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colactions = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -45,12 +40,40 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btn_delete);
+            this.panel1.Controls.Add(this.btn_save);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(13, 14);
+            this.panel1.Location = new System.Drawing.Point(14, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(990, 335);
+            this.panel1.Size = new System.Drawing.Size(1457, 574);
             this.panel1.TabIndex = 2;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.Color.Red;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_delete.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Location = new System.Drawing.Point(1281, 13);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(156, 30);
+            this.btn_delete.TabIndex = 6;
+            this.btn_delete.Text = "Delete User";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.Color.Green;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_save.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(1097, 13);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(156, 30);
+            this.btn_save.TabIndex = 7;
+            this.btn_save.Text = "Save Changes";
+            this.btn_save.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -68,69 +91,19 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colname,
-            this.colid,
-            this.coluser,
-            this.colemail,
-            this.colexam,
-            this.colscore,
-            this.colactions});
             this.dataGridView1.Location = new System.Drawing.Point(0, 60);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(990, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(1457, 514);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // colname
-            // 
-            this.colname.HeaderText = "NAME";
-            this.colname.Name = "colname";
-            // 
-            // colid
-            // 
-            this.colid.HeaderText = "STUDENT NUMBER";
-            this.colid.Name = "colid";
-            this.colid.ReadOnly = true;
-            // 
-            // coluser
-            // 
-            this.coluser.HeaderText = "USERNAME";
-            this.coluser.Name = "coluser";
-            // 
-            // colemail
-            // 
-            this.colemail.HeaderText = "EMAIL";
-            this.colemail.Name = "colemail";
-            // 
-            // colexam
-            // 
-            this.colexam.HeaderText = "EXAM STATUS";
-            this.colexam.Name = "colexam";
-            this.colexam.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colexam.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colscore
-            // 
-            this.colscore.HeaderText = "LAST SCORE";
-            this.colscore.Name = "colscore";
-            this.colscore.ReadOnly = true;
-            // 
-            // colactions
-            // 
-            this.colactions.FillWeight = 50F;
-            this.colactions.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.colactions.HeaderText = "ACTIONS";
-            this.colactions.Name = "colactions";
-            this.colactions.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colactions.UseColumnTextForButtonValue = true;
             // 
             // StudentManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Controls.Add(this.panel1);
             this.Name = "StudentManagement";
-            this.Size = new System.Drawing.Size(1017, 363);
+            this.Size = new System.Drawing.Size(1484, 591);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -140,14 +113,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coluser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colemail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colexam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colscore;
-        private System.Windows.Forms.DataGridViewButtonColumn colactions;
     }
 }

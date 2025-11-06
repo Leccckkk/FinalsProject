@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.btn_dashboard);
             this.panel1.Location = new System.Drawing.Point(0, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1017, 48);
+            this.panel1.Size = new System.Drawing.Size(1484, 48);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -71,7 +71,7 @@
             this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_reports.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reports.ForeColor = System.Drawing.Color.Black;
-            this.btn_reports.Location = new System.Drawing.Point(743, 3);
+            this.btn_reports.Location = new System.Drawing.Point(779, 3);
             this.btn_reports.Name = "btn_reports";
             this.btn_reports.Size = new System.Drawing.Size(177, 41);
             this.btn_reports.TabIndex = 6;
@@ -88,9 +88,9 @@
             this.btn_studentmanagement.ForeColor = System.Drawing.Color.Black;
             this.btn_studentmanagement.Location = new System.Drawing.Point(560, 3);
             this.btn_studentmanagement.Name = "btn_studentmanagement";
-            this.btn_studentmanagement.Size = new System.Drawing.Size(177, 41);
+            this.btn_studentmanagement.Size = new System.Drawing.Size(213, 41);
             this.btn_studentmanagement.TabIndex = 6;
-            this.btn_studentmanagement.Text = "Student Management";
+            this.btn_studentmanagement.Text = "Student Info Management";
             this.btn_studentmanagement.UseVisualStyleBackColor = false;
             this.btn_studentmanagement.Click += new System.EventHandler(this.btn_studentmanagement_Click);
             // 
@@ -145,9 +145,9 @@
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logout.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(903, 24);
+            this.btn_logout.Location = new System.Drawing.Point(1346, 16);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(86, 29);
+            this.btn_logout.Size = new System.Drawing.Size(124, 39);
             this.btn_logout.TabIndex = 2;
             this.btn_logout.Text = "Logout";
             this.btn_logout.UseVisualStyleBackColor = false;
@@ -157,7 +157,7 @@
             // 
             this.panelContainer.Location = new System.Drawing.Point(0, 116);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1017, 363);
+            this.panelContainer.Size = new System.Drawing.Size(1484, 591);
             this.panelContainer.TabIndex = 3;
             this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
@@ -166,7 +166,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1017, 477);
+            this.ClientSize = new System.Drawing.Size(1482, 706);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.panel1);

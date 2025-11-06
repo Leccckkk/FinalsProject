@@ -37,7 +37,6 @@
             this.btn_Next = new System.Windows.Forms.Button();
             this.txt_Question = new System.Windows.Forms.Label();
             this.txt_Number = new System.Windows.Forms.Label();
-            this.btn_finish = new System.Windows.Forms.Button();
             this.gb_Choices.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,9 +118,9 @@
             this.btn_Next.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Next.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Next.ForeColor = System.Drawing.Color.White;
-            this.btn_Next.Location = new System.Drawing.Point(192, 340);
+            this.btn_Next.Location = new System.Drawing.Point(436, 340);
             this.btn_Next.Name = "btn_Next";
-            this.btn_Next.Size = new System.Drawing.Size(117, 29);
+            this.btn_Next.Size = new System.Drawing.Size(159, 29);
             this.btn_Next.TabIndex = 9;
             this.btn_Next.Text = "Next";
             this.btn_Next.UseVisualStyleBackColor = false;
@@ -147,27 +146,12 @@
             this.txt_Number.TabIndex = 10;
             this.txt_Number.Text = "1. ";
             // 
-            // btn_finish
-            // 
-            this.btn_finish.BackColor = System.Drawing.Color.OrangeRed;
-            this.btn_finish.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_finish.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_finish.ForeColor = System.Drawing.Color.White;
-            this.btn_finish.Location = new System.Drawing.Point(624, 340);
-            this.btn_finish.Name = "btn_finish";
-            this.btn_finish.Size = new System.Drawing.Size(117, 29);
-            this.btn_finish.TabIndex = 13;
-            this.btn_finish.Text = "Finish";
-            this.btn_finish.UseVisualStyleBackColor = false;
-            this.btn_finish.Click += new System.EventHandler(this.btn_finish_Click);
-            // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1001, 381);
-            this.Controls.Add(this.btn_finish);
             this.Controls.Add(this.gb_Choices);
             this.Controls.Add(this.txt_subject);
             this.Controls.Add(this.btn_Next);
@@ -195,6 +179,5 @@
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Label txt_Question;
         private System.Windows.Forms.Label txt_Number;
-        private System.Windows.Forms.Button btn_finish;
     }
 }

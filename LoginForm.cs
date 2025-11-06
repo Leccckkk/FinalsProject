@@ -20,21 +20,21 @@ namespace FinalsProject
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string LoginReturn = Login.CheckLogin(tb_Username.Text, tb_Password.Text);
-            if (LoginReturn == "Admin")
+            if (LoginReturn == "admin")
             {
                 GlobalDataa.UserName = tb_Username.Text;
                 AdminForm f2 = new AdminForm();
                 f2.Show();
                 this.Hide();
             }
-            else if (LoginReturn == "Faculty")
+            else if (LoginReturn == "faculty")
             {
                 GlobalDataa.UserName = tb_Username.Text;
                 FacultyForm f3 = new FacultyForm();
                 f3.Show();
                 this.Hide();
             }
-            else if (LoginReturn == "Student")
+            else if (LoginReturn == "student")
             {
                 GlobalDataa.UserName = tb_Username.Text;
                 StudentEForm f4 = new StudentEForm();

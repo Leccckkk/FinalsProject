@@ -52,7 +52,7 @@ namespace FinalsProject
 
                     sqlconnection.Open();
 
-                    sqlcmd.CommandText = $"SELECT * FROM tbl_questions WHERE id = {number} AND subject = '{Subject}'";
+                    sqlcmd.CommandText = $"SELECT * FROM tbl_questions WHERE subject = '{Subject}' ORDER BY RAND() LIMIT 1";
                     sqlcmd.CommandType = CommandType.Text;
                     sqlcmd.Connection = sqlconnection;
 
@@ -60,11 +60,12 @@ namespace FinalsProject
 
                     while (sqlreader.Read())
                     {
-                        txt_Question.Text = sqlreader[2].ToString();
-                        rb_Choice1.Text = sqlreader[3].ToString();
-                        rb_Choice2.Text = sqlreader[4].ToString();
-                        rb_Choice3.Text = sqlreader[5].ToString();
-                        rb_Choice4.Text = sqlreader[6].ToString();
+                        txt_subject.Text = sqlreader[2].ToString();
+                        txt_Question.Text = sqlreader[3].ToString();
+                        rb_Choice1.Text = sqlreader[4].ToString();
+                        rb_Choice2.Text = sqlreader[5].ToString();
+                        rb_Choice3.Text = sqlreader[6].ToString();
+                        rb_Choice4.Text = sqlreader[7].ToString();
                     }
 
                     sqlconnection.Close();
@@ -76,13 +77,6 @@ namespace FinalsProject
 
 
 
-        private void btn_finish_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Exam Finished!");
-            _studentEForm.Disable();
-            _studentEForm.Show();
-            this.Close();
-        }
 
         private void btn_Next_Click_1(object sender, EventArgs e)
         {
@@ -117,7 +111,7 @@ namespace FinalsProject
 
             sqlconnection.Open();
 
-            sqlcmd.CommandText = $"SELECT * FROM tbl_questions WHERE id = {number} AND subject = '{Subject}'";
+            sqlcmd.CommandText = $"SELECT * FROM tbl_questions WHERE subject = '{Subject}' ORDER BY RAND() LIMIT 1";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlconnection;
 
@@ -127,28 +121,28 @@ namespace FinalsProject
             {
                 if (rb_Choice1.Checked == true)
                 {
-                    if (rb_Choice1.Text == sqlreader[7].ToString())
+                    if (rb_Choice1.Text == sqlreader[8].ToString())
                     {
                         Score++;
                     }
                 }
                 else if (rb_Choice2.Checked == true)
                 {
-                    if (rb_Choice2.Text == sqlreader[7].ToString())
+                    if (rb_Choice2.Text == sqlreader[8].ToString())
                     {
                         Score++;
                     }
                 }
                 else if (rb_Choice3.Checked == true)
                 {
-                    if (rb_Choice3.Text == sqlreader[7].ToString())
+                    if (rb_Choice3.Text == sqlreader[8].ToString())
                     {
                         Score++;
                     }
                 }
                 else if (rb_Choice4.Checked == true)
                 {
-                    if (rb_Choice4.Text == sqlreader[7].ToString())
+                    if (rb_Choice4.Text == sqlreader[8].ToString())
                     {
                         Score++;
                     }
@@ -157,7 +151,10 @@ namespace FinalsProject
             }
 
             sqlconnection.Close();
-
+            if (Number == 40)
+            {
+                btn_Next.Text = "Finish";
+            }
             if (Number <= 40)
             {
                 txt_subject.Text = Subject;
@@ -170,7 +167,7 @@ namespace FinalsProject
 
                 sqlconnection.Open();
 
-                sqlcmd.CommandText = $"SELECT * FROM tbl_questions WHERE id = {number} AND subject = '{Subject}'";
+                sqlcmd.CommandText = $"SELECT * FROM tbl_questions WHERE subject = '{Subject}' ORDER BY RAND() LIMIT 1";
                 sqlcmd.CommandType = CommandType.Text;
                 sqlcmd.Connection = sqlconnection;
 
@@ -178,11 +175,12 @@ namespace FinalsProject
 
                 while (sqlreader.Read())
                 {
-                    txt_Question.Text = sqlreader[2].ToString();
-                    rb_Choice1.Text = sqlreader[3].ToString();
-                    rb_Choice2.Text = sqlreader[4].ToString();
-                    rb_Choice3.Text = sqlreader[5].ToString();
-                    rb_Choice4.Text = sqlreader[6].ToString();
+                    txt_subject.Text = sqlreader[2].ToString();
+                    txt_Question.Text = sqlreader[3].ToString();
+                    rb_Choice1.Text = sqlreader[4].ToString();
+                    rb_Choice2.Text = sqlreader[5].ToString();
+                    rb_Choice3.Text = sqlreader[6].ToString();
+                    rb_Choice4.Text = sqlreader[7].ToString();
 
                 }
 
@@ -222,9 +220,11 @@ namespace FinalsProject
 
                 GlobalDataa.StudentScore = Sum;
 
-                StudentEForm f4 = new StudentEForm();
-                f4.Show();
-                this.Hide();
+                MessageBox.Show("Exam Finished!");
+                _studentEForm.Disable();
+                _studentEForm.Show();
+                this.Close();
+
             }
 
         } 

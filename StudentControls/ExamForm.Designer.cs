@@ -52,7 +52,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txt_StudName);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(67, 142);
+            this.panel1.Location = new System.Drawing.Point(306, 226);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 10;
@@ -81,7 +81,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(295, 142);
+            this.panel2.Location = new System.Drawing.Point(534, 226);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 11;
@@ -110,7 +110,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(526, 142);
+            this.panel3.Location = new System.Drawing.Point(765, 226);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 12;
@@ -139,7 +139,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Location = new System.Drawing.Point(752, 142);
+            this.panel4.Location = new System.Drawing.Point(991, 226);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 100);
             this.panel4.TabIndex = 13;
@@ -171,7 +171,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Name = "ExamForm";
-            this.Size = new System.Drawing.Size(1017, 420);
+            this.Size = new System.Drawing.Size(1484, 591);
             this.Load += new System.EventHandler(this.ExamForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

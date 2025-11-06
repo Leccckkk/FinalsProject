@@ -104,3 +104,161 @@ public class ShowQuestions
         }
     }
 }
+
+public static class QuestionManager
+{
+    private static string connStr = "server=localhost;database=dbfinals;uid=root;pwd=;";
+
+    public static DataTable LoadQuestions()
+    {
+        DataTable dt = new DataTable();
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "SELECT * FROM tbl_questions ORDER BY subject, CAST(number AS UNSIGNED)";
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            {
+                adapter.Fill(dt);
+            }
+        }
+
+        return dt;
+    }
+    public static void SaveChanges(DataTable dt)
+    {
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "SELECT * FROM tbl_questions";
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            {
+                MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
+                adapter.UpdateCommand = builder.GetUpdateCommand();
+                adapter.InsertCommand = builder.GetInsertCommand();
+                adapter.DeleteCommand = builder.GetDeleteCommand();
+
+                adapter.Update(dt);
+            }
+        }
+    }
+    public static int CountQuestionsBySubject(string subject)
+    {
+        int total = 0;
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "SELECT COUNT(*) FROM tbl_questions WHERE subject = @subject";
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@subject", subject);
+                total = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        return total;
+    }
+
+    public static void DeleteQuestion(int id)
+    {
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "DELETE FROM tbl_questions WHERE id = @id";
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+    }
+
+}
+
+public static class UserManager
+{
+    private static string connStr = "server=localhost;database=dbfinals;uid=root;pwd=;";
+
+    public static DataTable LoadUsers()
+    {
+        DataTable dt = new DataTable();
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "SELECT * FROM tbl_users ORDER BY userType";
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            {
+                adapter.Fill(dt);
+            }
+        }
+
+        return dt;
+    }
+    public static DataTable LoadStudents()
+    {
+        DataTable dt = new DataTable();
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "SELECT * FROM tbl_users WHERE userType = @type";
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            {
+                adapter.SelectCommand.Parameters.AddWithValue("@type", "student");
+                adapter.Fill(dt);
+            }
+        }
+
+        return dt;
+    }
+    public static int CountStudents(string subject)
+    {
+        int total = 0;
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "SELECT COUNT(*) FROM tbl_users WHERE userType = @type";
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@type", "student");
+                total = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        return total;
+    }
+    public static void SaveChanges(DataTable dt)
+    {
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "SELECT * FROM tbl_users";
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            {
+                MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
+                adapter.UpdateCommand = builder.GetUpdateCommand();
+                adapter.InsertCommand = builder.GetInsertCommand();
+                adapter.DeleteCommand = builder.GetDeleteCommand();
+
+                adapter.Update(dt);
+            }
+        }
+    }
+
+    public static void DeleteUser(int Username)
+    {
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "DELETE FROM tbl_users WHERE Username = @Username";
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Username", Username);
+                cmd.ExecuteNonQuery();
+            }
+        }
+    }
+}
