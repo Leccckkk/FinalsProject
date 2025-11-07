@@ -139,7 +139,7 @@
             this.Txt_HisS.Name = "Txt_HisS";
             this.Txt_HisS.Size = new System.Drawing.Size(122, 39);
             this.Txt_HisS.TabIndex = 12;
-            this.Txt_HisS.Text = "10/10";
+            this.Txt_HisS.Text = "0/25";
             this.Txt_HisS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Txt_SciS
@@ -150,7 +150,7 @@
             this.Txt_SciS.Name = "Txt_SciS";
             this.Txt_SciS.Size = new System.Drawing.Size(122, 39);
             this.Txt_SciS.TabIndex = 11;
-            this.Txt_SciS.Text = "10/10";
+            this.Txt_SciS.Text = "0/25";
             this.Txt_SciS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Txt_EngS
@@ -161,7 +161,7 @@
             this.Txt_EngS.Name = "Txt_EngS";
             this.Txt_EngS.Size = new System.Drawing.Size(122, 39);
             this.Txt_EngS.TabIndex = 10;
-            this.Txt_EngS.Text = "10/10";
+            this.Txt_EngS.Text = "0/25";
             this.Txt_EngS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Txt_MathS
@@ -172,7 +172,7 @@
             this.Txt_MathS.Name = "Txt_MathS";
             this.Txt_MathS.Size = new System.Drawing.Size(122, 39);
             this.Txt_MathS.TabIndex = 9;
-            this.Txt_MathS.Text = "10/10";
+            this.Txt_MathS.Text = "0/25";
             this.Txt_MathS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10

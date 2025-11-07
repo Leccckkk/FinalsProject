@@ -150,6 +150,7 @@
             this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(19, 182);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1446, 388);
             this.dataGridView1.TabIndex = 5;
             // 
@@ -175,11 +176,13 @@
             // 
             this.Column1.HeaderText = "STATUS";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "DATE";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // panel2
             // 

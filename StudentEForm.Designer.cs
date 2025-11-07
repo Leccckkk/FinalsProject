@@ -32,16 +32,16 @@
             this.panelContainer = new System.Windows.Forms.Panel();
             this.btn_logout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_dashboard = new System.Windows.Forms.Button();
-            this.btn_takeexam = new System.Windows.Forms.Button();
             this.btn_viewresults = new System.Windows.Forms.Button();
+            this.btn_takeexam = new System.Windows.Forms.Button();
+            this.btn_dashboard = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 8);
+            this.label1.Location = new System.Drawing.Point(12, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 37);
             this.label1.TabIndex = 4;
@@ -51,7 +51,7 @@
             // 
             this.panelContainer.Location = new System.Drawing.Point(1, 96);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1017, 420);
+            this.panelContainer.Size = new System.Drawing.Size(1484, 591);
             this.panelContainer.TabIndex = 7;
             // 
             // btn_logout
@@ -60,7 +60,7 @@
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logout.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(903, 14);
+            this.btn_logout.Location = new System.Drawing.Point(1387, 12);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(86, 29);
             this.btn_logout.TabIndex = 6;
@@ -76,23 +76,23 @@
             this.panel1.Controls.Add(this.btn_dashboard);
             this.panel1.Location = new System.Drawing.Point(0, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1017, 48);
+            this.panel1.Size = new System.Drawing.Size(1485, 48);
             this.panel1.TabIndex = 5;
             // 
-            // btn_dashboard
+            // btn_viewresults
             // 
-            this.btn_dashboard.BackColor = System.Drawing.Color.White;
-            this.btn_dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_dashboard.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashboard.ForeColor = System.Drawing.Color.Black;
-            this.btn_dashboard.Location = new System.Drawing.Point(12, 4);
-            this.btn_dashboard.Name = "btn_dashboard";
-            this.btn_dashboard.Size = new System.Drawing.Size(111, 41);
-            this.btn_dashboard.TabIndex = 3;
-            this.btn_dashboard.Text = "Dashboard";
-            this.btn_dashboard.UseVisualStyleBackColor = false;
-            this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
+            this.btn_viewresults.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_viewresults.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_viewresults.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_viewresults.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_viewresults.ForeColor = System.Drawing.Color.White;
+            this.btn_viewresults.Location = new System.Drawing.Point(1345, 3);
+            this.btn_viewresults.Name = "btn_viewresults";
+            this.btn_viewresults.Size = new System.Drawing.Size(128, 41);
+            this.btn_viewresults.TabIndex = 5;
+            this.btn_viewresults.Text = "View Results";
+            this.btn_viewresults.UseVisualStyleBackColor = false;
+            this.btn_viewresults.Click += new System.EventHandler(this.btn_viewresults_Click);
             // 
             // btn_takeexam
             // 
@@ -109,26 +109,26 @@
             this.btn_takeexam.UseVisualStyleBackColor = false;
             this.btn_takeexam.Click += new System.EventHandler(this.btn_results_Click);
             // 
-            // btn_viewresults
+            // btn_dashboard
             // 
-            this.btn_viewresults.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_viewresults.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_viewresults.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_viewresults.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_viewresults.ForeColor = System.Drawing.Color.White;
-            this.btn_viewresults.Location = new System.Drawing.Point(877, 4);
-            this.btn_viewresults.Name = "btn_viewresults";
-            this.btn_viewresults.Size = new System.Drawing.Size(128, 41);
-            this.btn_viewresults.TabIndex = 5;
-            this.btn_viewresults.Text = "View Results";
-            this.btn_viewresults.UseVisualStyleBackColor = false;
-            this.btn_viewresults.Click += new System.EventHandler(this.btn_viewresults_Click);
+            this.btn_dashboard.BackColor = System.Drawing.Color.White;
+            this.btn_dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_dashboard.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashboard.ForeColor = System.Drawing.Color.Black;
+            this.btn_dashboard.Location = new System.Drawing.Point(12, 4);
+            this.btn_dashboard.Name = "btn_dashboard";
+            this.btn_dashboard.Size = new System.Drawing.Size(111, 41);
+            this.btn_dashboard.TabIndex = 3;
+            this.btn_dashboard.Text = "Dashboard";
+            this.btn_dashboard.UseVisualStyleBackColor = false;
+            this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
             // StudentEForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 516);
+            this.ClientSize = new System.Drawing.Size(1485, 687);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelContainer);

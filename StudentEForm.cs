@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FinalsProject.StudentControls;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FinalsProject.StudentControls;
 
 namespace FinalsProject
 {
@@ -44,10 +45,34 @@ namespace FinalsProject
         private void StudentEForm_Load(object sender, EventArgs e)
         {
             LoadUserControl(new StudentControls.ExamForm());
+            CheckExamStatus();
+
+        }
+        private void CheckExamStatus()
+        {
+            string dbconnect = "SERVER=localhost; database=dbfinals; uid=root";
+            using (MySqlConnection sqlconnection = new MySqlConnection(dbconnect))
+            {
+                sqlconnection.Open();
+                string query = "SELECT COUNT(*) FROM tbl_studentscores WHERE Username = @user";
+                MySqlCommand sqlcmd = new MySqlCommand(query, sqlconnection);
+                sqlcmd.Parameters.AddWithValue("@user", GlobalDataa.UserName);
+
+                int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
+                if (count > 0)
+                {
+                    btn_takeexam.Visible = false; 
+                }
+                else
+                {
+                    btn_takeexam.Visible = true;
+                }
+            }
         }
 
         private void btn_results_Click(object sender, EventArgs e)
         {
+
             ExamForm f1 = new ExamForm(this);
             f1.Show();
             this.Hide();

@@ -50,12 +50,12 @@ namespace FinalsProject.StudentControls
                     Txt_Status.ForeColor = Color.Red;
                 }
 
-                Txt_OverScore.Text = Convert.ToString(GlobalDataa.StudentScore) + "/40";
+                Txt_OverScore.Text = Convert.ToString(sqlreader[5].ToString()) + "/100";
 
-                Txt_MathS.Text = Convert.ToString(sqlreader[1].ToString()) + "/10";
-                Txt_EngS.Text = Convert.ToString(sqlreader[2].ToString()) + "/10";
-                Txt_SciS.Text = Convert.ToString(sqlreader[3].ToString()) + "/10";
-                Txt_HisS.Text = Convert.ToString(sqlreader[4].ToString()) + "/10";
+                Txt_MathS.Text = Convert.ToString(sqlreader[1].ToString()) + "/25";
+                Txt_EngS.Text = Convert.ToString(sqlreader[2].ToString()) + "/25";
+                Txt_SciS.Text = Convert.ToString(sqlreader[3].ToString()) + "/25";
+                Txt_HisS.Text = Convert.ToString(sqlreader[4].ToString()) + "/25";
 
                
             }

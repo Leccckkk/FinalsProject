@@ -37,6 +37,7 @@
             this.btn_Next = new System.Windows.Forms.Button();
             this.txt_Question = new System.Windows.Forms.Label();
             this.txt_Number = new System.Windows.Forms.Label();
+            this.txt_point = new System.Windows.Forms.Label();
             this.gb_Choices.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,12 +147,23 @@
             this.txt_Number.TabIndex = 10;
             this.txt_Number.Text = "1. ";
             // 
+            // txt_point
+            // 
+            this.txt_point.AutoSize = true;
+            this.txt_point.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_point.Location = new System.Drawing.Point(875, 57);
+            this.txt_point.Name = "txt_point";
+            this.txt_point.Size = new System.Drawing.Size(16, 17);
+            this.txt_point.TabIndex = 13;
+            this.txt_point.Text = "1";
+            // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1001, 381);
+            this.Controls.Add(this.txt_point);
             this.Controls.Add(this.gb_Choices);
             this.Controls.Add(this.txt_subject);
             this.Controls.Add(this.btn_Next);
@@ -179,5 +191,6 @@
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Label txt_Question;
         private System.Windows.Forms.Label txt_Number;
+        private System.Windows.Forms.Label txt_point;
     }
 }
