@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 
 namespace FinalsProject
@@ -203,10 +204,26 @@ public static class UserManager
         using (MySqlConnection conn = new MySqlConnection(connStr))
         {
             conn.Open();
-            string query = "SELECT * FROM tbl_users WHERE userType = @type";
+
+            string query = @"
+            SELECT 
+                u.name,
+                s.MathScore,
+                s.EngScore,
+                s.SciScore,
+                s.HisScore,
+                s.SumScore,
+                COALESCE(s.Status, 'Not Taken') AS Status,
+                s.Average
+            FROM tbl_users u
+            LEFT JOIN tbl_studentscores s 
+                ON u.Username = s.Username
+            WHERE u.userType = 'student'
+            ORDER BY u.name;
+        ";
+
             using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
             {
-                adapter.SelectCommand.Parameters.AddWithValue("@type", "student");
                 adapter.Fill(dt);
             }
         }
@@ -247,18 +264,150 @@ public static class UserManager
             }
         }
     }
-
-    public static void DeleteUser(int Username)
+    public static void SaveStudentScores(DataTable dt)
     {
         using (MySqlConnection conn = new MySqlConnection(connStr))
         {
             conn.Open();
-            string query = "DELETE FROM tbl_users WHERE Username = @Username";
-            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            string query = "SELECT * FROM tbl_studentscores";
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
             {
-                cmd.Parameters.AddWithValue("@Username", Username);
-                cmd.ExecuteNonQuery();
+                MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
+                adapter.UpdateCommand = builder.GetUpdateCommand();
+                adapter.InsertCommand = builder.GetInsertCommand();
+                adapter.DeleteCommand = builder.GetDeleteCommand();
+                adapter.Update(dt);
             }
         }
+    }
+
+    public static void DeleteUser(string Username)
+    {
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+
+            string deleteScores = "DELETE FROM tbl_studentscores WHERE Username = @Username";
+            using (MySqlCommand cmdScores = new MySqlCommand(deleteScores, conn))
+            {
+                cmdScores.Parameters.AddWithValue("@Username", Username);
+                cmdScores.ExecuteNonQuery();
+            }
+
+            string deleteUser = "DELETE FROM tbl_users WHERE Username = @Username";
+            using (MySqlCommand cmdUser = new MySqlCommand(deleteUser, conn))
+            {
+                cmdUser.Parameters.AddWithValue("@Username", Username);
+                cmdUser.ExecuteNonQuery();
+            }
+        }
+    }
+    public static void DeleteRecord(string Username)
+    {
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+
+            string deleteScores = "DELETE FROM tbl_studentscores WHERE Username = @Username";
+            using (MySqlCommand cmdScores = new MySqlCommand(deleteScores, conn))
+            {
+                cmdScores.Parameters.AddWithValue("@Username", Username);
+                cmdScores.ExecuteNonQuery();
+            }
+        }
+    }
+
+    public static int CountStudentsTakenExam()
+    {
+        int total = 0;
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = "SELECT COUNT(*) FROM tbl_studentscores";
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                total = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        return total;
+    }
+    public static double Passing()
+    {
+        double passingRate = 0;
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+
+            string queryPassed = "SELECT COUNT(*) FROM tbl_studentscores WHERE Status = 'PASSED'";
+            MySqlCommand cmdPassed = new MySqlCommand(queryPassed, conn);
+            int passedCount = Convert.ToInt32(cmdPassed.ExecuteScalar());
+
+            string queryTotal = "SELECT COUNT(*) FROM tbl_studentscores";
+            MySqlCommand cmdTotal = new MySqlCommand(queryTotal, conn);
+            int totalCount = Convert.ToInt32(cmdTotal.ExecuteScalar());
+
+            if (totalCount > 0)
+            {
+                passingRate = (double)passedCount / totalCount * 100;
+            }
+        }
+
+        return passingRate;
+    }
+    public static double Passed()
+    {
+        double passing = 0;
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+
+            string queryPassed = "SELECT COUNT(*) FROM tbl_studentscores WHERE Status = 'PASSED'";
+            MySqlCommand cmdPassed = new MySqlCommand(queryPassed, conn);
+            int passedCount = Convert.ToInt32(cmdPassed.ExecuteScalar());
+            passing = passedCount;
+        }
+
+        return passing;
+    }
+    public static double Failed()
+    {
+        double failing = 0;
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+
+            string queryPassed = "SELECT COUNT(*) FROM tbl_studentscores WHERE Status = 'FAILED'";
+            MySqlCommand cmdPassed = new MySqlCommand(queryPassed, conn);
+            int failedCount = Convert.ToInt32(cmdPassed.ExecuteScalar());
+            failing = failedCount;
+        }
+
+        return failing;
+    }
+    public static int NotTakenExam()
+    {
+        int total = 0;
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = @"
+            SELECT COUNT(*)
+            FROM tbl_users
+            WHERE userType = 'student'
+              AND Username NOT IN (SELECT Username FROM tbl_studentscores)";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                total = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        return total;
     }
 }

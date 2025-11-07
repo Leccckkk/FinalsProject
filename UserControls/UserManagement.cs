@@ -58,19 +58,36 @@ namespace FinalsProject.UserControls
                 return;
             }
 
-            int Username = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Username"].Value);
+            string Username = dataGridView1.CurrentRow.Cells["Username"].Value.ToString();
+            string userType = dataGridView1.CurrentRow.Cells["userType"].Value.ToString();
 
-            DialogResult confirm = MessageBox.Show("Are you sure you want to delete this question?",
-                                                   "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult confirm = MessageBox.Show(
+                $"Are you sure you want to delete the user '{Username}'?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+            if (userType.ToLower() == "admin")
+            {
+                MessageBox.Show("Admin accounts cannot be deleted.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (confirm == DialogResult.No)
                 return;
 
-            QuestionManager.DeleteQuestion(Username);
+            try
+            {
+                UserManager.DeleteUser(Username); 
 
-            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
 
-
-            MessageBox.Show("Question deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("User deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }

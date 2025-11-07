@@ -21,7 +21,7 @@ namespace FinalsProject.UserControls
 
         private void LoadGrid()
         {
-            dt = UserManager.LoadUsers();
+            dt = UserManager.LoadStudents();
             dataGridView1.DataSource = dt;
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,12 +51,45 @@ namespace FinalsProject.UserControls
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-
+            UserManager.SaveStudentScores(dt);
+            MessageBox.Show("Changes saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadGrid();
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
 
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a row to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string Username = dataGridView1.CurrentRow.Cells["Username"].Value.ToString();
+
+            DialogResult confirm = MessageBox.Show(
+                $"Are you sure you want to delete the record of user'{Username}'?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirm == DialogResult.No)
+                return;
+
+            try
+            {
+                UserManager.DeleteRecord(Username);
+
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+
+                MessageBox.Show("Record deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting record: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
-}
+    }
+

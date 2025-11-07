@@ -23,6 +23,36 @@ namespace FinalsProject.UserControls
             LoadUsers();
             LoadCountingStudents();
             LoadSubjectCounts();
+            StudentCount();
+            PassingRate();
+            Passed();
+            Failed();
+            StudentsNotTaken();
+        }
+        private void StudentsNotTaken()
+        {
+            int notTakenExamCount = UserManager.NotTakenExam();
+            txtnotyet.Text = notTakenExamCount.ToString();
+        }
+        private void Passed()
+        {
+            double passing = UserManager.Passed();
+            txtpassed.Text = $"{passing}";
+        }
+        private void Failed()
+        {
+            double failed = UserManager.Failed();
+            txtfailed.Text = $"{failed}";
+        }
+        private void PassingRate()
+        {
+            double passingRate = UserManager.Passing();
+            txtpassrate.Text = $"{passingRate:F2}%";
+        }
+        private void StudentCount()
+        {
+            int takenExamCount = UserManager.CountStudentsTakenExam();
+            txtexams.Text = takenExamCount.ToString();
         }
         private void LoadUsers()
         {
