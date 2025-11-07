@@ -219,7 +219,38 @@ public static class UserManager
             LEFT JOIN tbl_studentscores s 
                 ON u.Username = s.Username
             WHERE u.userType = 'student'
-            ORDER BY u.name;
+            ORDER BY s.Average DESC, u.name;
+        ";
+
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            {
+                adapter.Fill(dt);
+            }
+        }
+
+        return dt;
+    }
+    public static DataTable LoadStudents2()
+    {
+        DataTable dt = new DataTable();
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+
+            string query = @"
+            SELECT 
+                u.name,
+                s.SumScore,
+                COALESCE(s.Status, 'Not Taken') AS Status,
+                s.Average,
+                s.Strengths,
+                s.Weaknesses
+            FROM tbl_users u
+            LEFT JOIN tbl_studentscores s 
+                ON u.Username = s.Username
+            WHERE u.userType = 'student'
+            ORDER BY s.Average DESC, u.name;
         ";
 
             using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))

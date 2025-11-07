@@ -42,7 +42,7 @@
             // 
             this.panelContainer.Location = new System.Drawing.Point(0, 106);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1017, 363);
+            this.panelContainer.Size = new System.Drawing.Size(1484, 591);
             this.panelContainer.TabIndex = 7;
             // 
             // panel1
@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.btn_dashboard);
             this.panel1.Location = new System.Drawing.Point(0, 59);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1017, 48);
+            this.panel1.Size = new System.Drawing.Size(1484, 48);
             this.panel1.TabIndex = 5;
             // 
             // btn_reports
@@ -116,7 +116,7 @@
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logout.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(903, 14);
+            this.btn_logout.Location = new System.Drawing.Point(1384, 16);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(86, 29);
             this.btn_logout.TabIndex = 6;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 477);
+            this.ClientSize = new System.Drawing.Size(1482, 706);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
