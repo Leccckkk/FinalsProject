@@ -35,10 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtstats = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtaverage = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -108,50 +108,50 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.txtstats);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(765, 226);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 12;
             // 
-            // label4
+            // txtstats
             // 
-            this.label4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(56, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 23);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "0";
+            this.txtstats.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtstats.Location = new System.Drawing.Point(59, 43);
+            this.txtstats.Name = "txtstats";
+            this.txtstats.Size = new System.Drawing.Size(88, 43);
+            this.txtstats.TabIndex = 1;
+            this.txtstats.Text = "Not Yet Taken";
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 20);
+            this.label5.Location = new System.Drawing.Point(49, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 23);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Exams Taken";
+            this.label5.Text = "Exams Status";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.txtaverage);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(991, 226);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 100);
             this.panel4.TabIndex = 13;
             // 
-            // label6
+            // txtaverage
             // 
-            this.label6.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(56, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 23);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "1";
+            this.txtaverage.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaverage.Location = new System.Drawing.Point(56, 43);
+            this.txtaverage.Name = "txtaverage";
+            this.txtaverage.Size = new System.Drawing.Size(122, 23);
+            this.txtaverage.TabIndex = 1;
+            this.txtaverage.Text = "null";
             // 
             // label7
             // 
@@ -189,10 +189,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label txtstats;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label txtaverage;
         private System.Windows.Forms.Label label7;
     }
 }
