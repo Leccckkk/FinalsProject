@@ -126,6 +126,31 @@ public static class QuestionManager
 
         return dt;
     }
+
+    public static DataTable LoadQuestionsManagement(string subject)
+    {
+        DataTable dt = new DataTable();
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+            string query = @"
+            SELECT *
+            FROM tbl_questions
+            WHERE subject = @subject
+            ORDER BY subject, CAST(number AS UNSIGNED);
+        ";
+
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            {
+                adapter.SelectCommand.Parameters.AddWithValue("@subject", subject);
+                adapter.Fill(dt);
+            }
+        }
+
+        return dt;
+    }
+
     public static void SaveChanges(DataTable dt)
     {
         using (MySqlConnection conn = new MySqlConnection(connStr))
@@ -440,5 +465,17 @@ public static class UserManager
         }
 
         return total;
+    }
+}
+public static class Evaluate
+{
+    public static string EvaluateSubject(int score)
+    {
+        if (score >= 20)
+            return ("Excellent performance! Keep it up!");
+        else if (score >= 15)
+            return ("Good, but there is room for improvement.");
+        else
+            return ("Needs improvement. Study more on this subject.");
     }
 }

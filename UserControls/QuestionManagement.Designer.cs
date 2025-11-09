@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cb_sub = new System.Windows.Forms.ComboBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,6 +63,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.cb_sub);
             this.splitContainer1.Panel1.Controls.Add(this.btn_delete);
             this.splitContainer1.Panel1.Controls.Add(this.btn_save);
             this.splitContainer1.Panel1.Controls.Add(this.label9);
@@ -83,6 +87,33 @@
             this.splitContainer1.Size = new System.Drawing.Size(1443, 182);
             this.splitContainer1.SplitterDistance = 83;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(248, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 23);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Subjects:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cb_sub
+            // 
+            this.cb_sub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_sub.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cb_sub.FormattingEnabled = true;
+            this.cb_sub.Items.AddRange(new object[] {
+            "All",
+            "Mathematics",
+            "English",
+            "Science",
+            "History"});
+            this.cb_sub.Location = new System.Drawing.Point(335, 28);
+            this.cb_sub.Name = "cb_sub";
+            this.cb_sub.Size = new System.Drawing.Size(121, 26);
+            this.cb_sub.TabIndex = 7;
+            this.cb_sub.SelectedIndexChanged += new System.EventHandler(this.cb_sub_SelectedIndexChanged);
             // 
             // btn_delete
             // 
@@ -302,5 +333,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cb_sub;
     }
 }

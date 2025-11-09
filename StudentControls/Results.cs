@@ -57,7 +57,12 @@ namespace FinalsProject.StudentControls
                 Txt_SciS.Text = Convert.ToString(sqlreader[3].ToString()) + "/25";
                 Txt_HisS.Text = Convert.ToString(sqlreader[4].ToString()) + "/25";
 
-               
+                txt_Math.Text = Evaluate.EvaluateSubject(Convert.ToInt32(sqlreader[1].ToString()));
+                txt_eng.Text = Evaluate.EvaluateSubject(Convert.ToInt32(sqlreader[2].ToString()));
+                txt_sci.Text = Evaluate.EvaluateSubject(Convert.ToInt32(sqlreader[3].ToString()));
+                txt_his.Text = Evaluate.EvaluateSubject(Convert.ToInt32(sqlreader[4].ToString()));
+
+
             }
 
             sqlconnection.Close();

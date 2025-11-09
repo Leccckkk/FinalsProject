@@ -117,19 +117,46 @@ namespace FinalsProject
                 GlobalDataa.HistoryScore = Score;
                 Sum += Score;
 
+                int highest = GlobalDataa.MathScore;
+                if (GlobalDataa.EnglishScore > highest) highest = GlobalDataa.EnglishScore;
+                if (GlobalDataa.ScienceScore > highest) highest = GlobalDataa.ScienceScore;
+                if (GlobalDataa.HistoryScore > highest) highest = GlobalDataa.HistoryScore;
+
+                int lowest = GlobalDataa.MathScore;
+                if (GlobalDataa.EnglishScore < lowest) lowest = GlobalDataa.EnglishScore;
+                if (GlobalDataa.ScienceScore < lowest) lowest = GlobalDataa.ScienceScore;
+                if (GlobalDataa.HistoryScore < lowest) lowest = GlobalDataa.HistoryScore;
+
+                List<string> strengths = new List<string>();
+                if (GlobalDataa.MathScore == highest) strengths.Add("Mathematics");
+                if (GlobalDataa.EnglishScore == highest) strengths.Add("English");
+                if (GlobalDataa.ScienceScore == highest) strengths.Add("Science");
+                if (GlobalDataa.HistoryScore == highest) strengths.Add("History");
+
+                List<string> weaknesses = new List<string>();
+                if (GlobalDataa.MathScore == lowest) weaknesses.Add("Mathematics");
+                if (GlobalDataa.EnglishScore == lowest) weaknesses.Add("English");
+                if (GlobalDataa.ScienceScore == lowest) weaknesses.Add("Science");
+                if (GlobalDataa.HistoryScore == lowest) weaknesses.Add("History");
+
+                string Strengths = string.Join(", ", strengths);
+                string Weaknesses = string.Join(", ", weaknesses);
+
                 string dbconnect = "SERVER=localhost; database=dbfinals; uid=root";
                 using (MySqlConnection sqlconnection = new MySqlConnection(dbconnect))
                 {
                     sqlconnection.Open();
                     string query = "INSERT INTO tbl_studentscores " +
-                                   "(Username, MathScore, EngScore, SciScore, HisScore, SumScore) " +
-                                   "VALUES (@user, @math, @eng, @sci, @his, @sum)";
+                                   "(Username, MathScore, EngScore, SciScore, HisScore, Strengths, Weaknesses, SumScore) " +
+                                   "VALUES (@user, @math, @eng, @sci, @his, @Stre, @Weak, @sum)";
                     MySqlCommand sqlcmd = new MySqlCommand(query, sqlconnection);
                     sqlcmd.Parameters.AddWithValue("@user", GlobalDataa.UserName);
                     sqlcmd.Parameters.AddWithValue("@math", GlobalDataa.MathScore);
                     sqlcmd.Parameters.AddWithValue("@eng", GlobalDataa.EnglishScore);
                     sqlcmd.Parameters.AddWithValue("@sci", GlobalDataa.ScienceScore);
                     sqlcmd.Parameters.AddWithValue("@his", GlobalDataa.HistoryScore);
+                    sqlcmd.Parameters.AddWithValue("@Stre", Strengths);
+                    sqlcmd.Parameters.AddWithValue("@Weak", Weaknesses);
                     sqlcmd.Parameters.AddWithValue("@sum", Sum);
                     sqlcmd.ExecuteNonQuery();
                 }

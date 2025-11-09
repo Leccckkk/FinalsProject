@@ -28,7 +28,10 @@ namespace FinalsProject.UserControls
         }
         private void LoadGrid()
         {
-            dt = QuestionManager.LoadQuestions();
+            string subject = Convert.ToString(cb_sub.SelectedItem);
+            dt = QuestionManager.LoadQuestionsManagement(subject);
+            if (Convert.ToString(cb_sub.SelectedItem) == "All")
+                dt = QuestionManager.LoadQuestions();
             dataGridView1.DataSource = dt;
             dataGridView1.Columns["id"].ReadOnly = true;
         }
@@ -102,6 +105,11 @@ namespace FinalsProject.UserControls
             LoadSubjectCountsDatabase();
 
             MessageBox.Show("Question deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void cb_sub_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadGrid();
         }
     }
 }

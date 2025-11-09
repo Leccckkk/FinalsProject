@@ -44,6 +44,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.txt_Math = new System.Windows.Forms.Label();
+            this.txt_eng = new System.Windows.Forms.Label();
+            this.txt_sci = new System.Windows.Forms.Label();
+            this.txt_his = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +121,10 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.txt_his);
+            this.panel5.Controls.Add(this.txt_sci);
+            this.panel5.Controls.Add(this.txt_eng);
+            this.panel5.Controls.Add(this.txt_Math);
             this.panel5.Controls.Add(this.Txt_HisS);
             this.panel5.Controls.Add(this.Txt_SciS);
             this.panel5.Controls.Add(this.Txt_EngS);
@@ -178,38 +186,42 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(981, 167);
+            this.label10.Location = new System.Drawing.Point(971, 168);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 23);
             this.label10.TabIndex = 8;
             this.label10.Text = "History";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(761, 167);
+            this.label7.Location = new System.Drawing.Point(751, 168);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 23);
             this.label7.TabIndex = 7;
             this.label7.Text = "Science";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(529, 167);
+            this.label6.Location = new System.Drawing.Point(511, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 23);
             this.label6.TabIndex = 6;
             this.label6.Text = "English";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(301, 167);
+            this.label5.Location = new System.Drawing.Point(300, 168);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 23);
             this.label5.TabIndex = 5;
             this.label5.Text = "Mathematics";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -219,6 +231,46 @@
             this.label9.Size = new System.Drawing.Size(154, 23);
             this.label9.TabIndex = 0;
             this.label9.Text = "Subject Details";
+            // 
+            // txt_Math
+            // 
+            this.txt_Math.Font = new System.Drawing.Font("Cascadia Code Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Math.Location = new System.Drawing.Point(271, 191);
+            this.txt_Math.Name = "txt_Math";
+            this.txt_Math.Size = new System.Drawing.Size(150, 98);
+            this.txt_Math.TabIndex = 13;
+            this.txt_Math.Text = "Mathematics";
+            this.txt_Math.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_eng
+            // 
+            this.txt_eng.Font = new System.Drawing.Font("Cascadia Code Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_eng.Location = new System.Drawing.Point(482, 191);
+            this.txt_eng.Name = "txt_eng";
+            this.txt_eng.Size = new System.Drawing.Size(150, 98);
+            this.txt_eng.TabIndex = 14;
+            this.txt_eng.Text = "English";
+            this.txt_eng.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_sci
+            // 
+            this.txt_sci.Font = new System.Drawing.Font("Cascadia Code Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_sci.Location = new System.Drawing.Point(722, 191);
+            this.txt_sci.Name = "txt_sci";
+            this.txt_sci.Size = new System.Drawing.Size(150, 98);
+            this.txt_sci.TabIndex = 15;
+            this.txt_sci.Text = "Science";
+            this.txt_sci.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_his
+            // 
+            this.txt_his.Font = new System.Drawing.Font("Cascadia Code Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_his.Location = new System.Drawing.Point(942, 191);
+            this.txt_his.Name = "txt_his";
+            this.txt_his.Size = new System.Drawing.Size(150, 98);
+            this.txt_his.TabIndex = 16;
+            this.txt_his.Text = "History";
+            this.txt_his.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Results
             // 
@@ -254,5 +306,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label txt_his;
+        private System.Windows.Forms.Label txt_sci;
+        private System.Windows.Forms.Label txt_eng;
+        private System.Windows.Forms.Label txt_Math;
     }
 }
