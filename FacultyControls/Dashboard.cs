@@ -70,5 +70,15 @@ namespace FinalsProject.FacultyControls
                 + QuestionManager.CountQuestionsBySubject("Science")
                 + QuestionManager.CountQuestionsBySubject("History")).ToString();
         }
+
+        private void txtstudents_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

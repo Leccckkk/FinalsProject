@@ -70,23 +70,25 @@
             // 
             // txtstudents
             // 
-            this.txtstudents.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtstudents.Location = new System.Drawing.Point(150, 120);
+            this.txtstudents.Font = new System.Drawing.Font("Cascadia Code", 13F, System.Drawing.FontStyle.Bold);
+            this.txtstudents.Location = new System.Drawing.Point(-1, 129);
             this.txtstudents.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtstudents.Name = "txtstudents";
-            this.txtstudents.Size = new System.Drawing.Size(183, 35);
+            this.txtstudents.Size = new System.Drawing.Size(352, 50);
             this.txtstudents.TabIndex = 1;
             this.txtstudents.Text = "1";
+            this.txtstudents.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 12F);
-            this.label1.Location = new System.Drawing.Point(130, 75);
+            this.label1.Font = new System.Drawing.Font("Geoform", 16F);
+            this.label1.Location = new System.Drawing.Point(-1, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 35);
+            this.label1.Size = new System.Drawing.Size(352, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Students";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel2
             // 
@@ -102,23 +104,25 @@
             // 
             // txtquestions
             // 
-            this.txtquestions.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquestions.Location = new System.Drawing.Point(145, 116);
+            this.txtquestions.Font = new System.Drawing.Font("Cascadia Code", 13F, System.Drawing.FontStyle.Bold);
+            this.txtquestions.Location = new System.Drawing.Point(-1, 125);
             this.txtquestions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtquestions.Name = "txtquestions";
-            this.txtquestions.Size = new System.Drawing.Size(183, 35);
+            this.txtquestions.Size = new System.Drawing.Size(352, 61);
             this.txtquestions.TabIndex = 1;
             this.txtquestions.Text = "1";
+            this.txtquestions.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Cascadia Code", 12F);
-            this.label3.Location = new System.Drawing.Point(111, 66);
+            this.label3.Font = new System.Drawing.Font("Geoform", 16F);
+            this.label3.Location = new System.Drawing.Point(-1, 66);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 35);
+            this.label3.Size = new System.Drawing.Size(352, 50);
             this.label3.TabIndex = 0;
             this.label3.Text = "Questions";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel3
             // 
@@ -134,23 +138,25 @@
             // 
             // txtexams
             // 
-            this.txtexams.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtexams.Location = new System.Drawing.Point(152, 113);
+            this.txtexams.Font = new System.Drawing.Font("Cascadia Code", 13F, System.Drawing.FontStyle.Bold);
+            this.txtexams.Location = new System.Drawing.Point(-1, 119);
             this.txtexams.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtexams.Name = "txtexams";
-            this.txtexams.Size = new System.Drawing.Size(183, 35);
+            this.txtexams.Size = new System.Drawing.Size(352, 66);
             this.txtexams.TabIndex = 1;
             this.txtexams.Text = "1";
+            this.txtexams.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Cascadia Code", 12F);
-            this.label5.Location = new System.Drawing.Point(59, 36);
+            this.label5.Font = new System.Drawing.Font("Geoform", 16F);
+            this.label5.Location = new System.Drawing.Point(2, 21);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(246, 68);
+            this.label5.Size = new System.Drawing.Size(349, 143);
             this.label5.TabIndex = 0;
             this.label5.Text = "Total Students (Completed Exam)";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel4
             // 
@@ -166,23 +172,25 @@
             // 
             // txtpassrate
             // 
-            this.txtpassrate.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassrate.Location = new System.Drawing.Point(142, 115);
+            this.txtpassrate.Font = new System.Drawing.Font("Cascadia Code", 13F, System.Drawing.FontStyle.Bold);
+            this.txtpassrate.Location = new System.Drawing.Point(0, 119);
             this.txtpassrate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtpassrate.Name = "txtpassrate";
-            this.txtpassrate.Size = new System.Drawing.Size(183, 35);
+            this.txtpassrate.Size = new System.Drawing.Size(352, 64);
             this.txtpassrate.TabIndex = 1;
             this.txtpassrate.Text = "1";
+            this.txtpassrate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Cascadia Code", 12F);
-            this.label7.Location = new System.Drawing.Point(116, 67);
+            this.label7.Font = new System.Drawing.Font("Geoform", 16F);
+            this.label7.Location = new System.Drawing.Point(-1, 61);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(183, 35);
+            this.label7.Size = new System.Drawing.Size(352, 46);
             this.label7.TabIndex = 0;
             this.label7.Text = "Pass Rate";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel5
             // 
@@ -202,8 +210,8 @@
             // 
             // txtnotyet
             // 
-            this.txtnotyet.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnotyet.Location = new System.Drawing.Point(1001, 66);
+            this.txtnotyet.Font = new System.Drawing.Font("Cascadia Code", 13F, System.Drawing.FontStyle.Bold);
+            this.txtnotyet.Location = new System.Drawing.Point(1004, 70);
             this.txtnotyet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtnotyet.Name = "txtnotyet";
             this.txtnotyet.Size = new System.Drawing.Size(183, 35);
@@ -212,28 +220,28 @@
             // 
             // txtfailed
             // 
-            this.txtfailed.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfailed.Location = new System.Drawing.Point(519, 66);
+            this.txtfailed.Font = new System.Drawing.Font("Cascadia Code", 13F, System.Drawing.FontStyle.Bold);
+            this.txtfailed.Location = new System.Drawing.Point(522, 72);
             this.txtfailed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtfailed.Name = "txtfailed";
-            this.txtfailed.Size = new System.Drawing.Size(183, 35);
+            this.txtfailed.Size = new System.Drawing.Size(183, 57);
             this.txtfailed.TabIndex = 5;
             this.txtfailed.Text = "1";
             // 
             // txtpassed
             // 
-            this.txtpassed.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassed.Location = new System.Drawing.Point(36, 66);
+            this.txtpassed.Font = new System.Drawing.Font("Cascadia Code", 13F, System.Drawing.FontStyle.Bold);
+            this.txtpassed.Location = new System.Drawing.Point(39, 75);
             this.txtpassed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtpassed.Name = "txtpassed";
-            this.txtpassed.Size = new System.Drawing.Size(183, 35);
+            this.txtpassed.Size = new System.Drawing.Size(183, 44);
             this.txtpassed.TabIndex = 4;
             this.txtpassed.Text = "1";
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Cascadia Code", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1001, 31);
+            this.label4.Font = new System.Drawing.Font("Geoform", 14F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(1001, 32);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(490, 35);
@@ -242,8 +250,8 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Cascadia Code", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(519, 31);
+            this.label2.Font = new System.Drawing.Font("Geoform", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(519, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(327, 35);
@@ -252,8 +260,8 @@
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Cascadia Code", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(36, 31);
+            this.label9.Font = new System.Drawing.Font("Geoform", 14F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(36, 35);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(363, 35);

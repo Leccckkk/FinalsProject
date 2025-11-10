@@ -21,5 +21,10 @@ namespace FinalsProject
         {
             register.RegisterUser(tb_Username.Text, tb_Password.Text);
         }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,5 +45,10 @@ namespace FinalsProject.FacultyControls
             double passingRate = UserManager.Passing();
             txtave.Text = $"{passingRate:F2}%";
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -79,5 +79,10 @@ namespace FinalsProject.StudentControls
         {
 
         }
+
+        private void txt_Math_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

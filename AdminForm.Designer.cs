@@ -39,11 +39,11 @@
             // 
             // btn_reports
             // 
-            this.btn_reports.BackColor = System.Drawing.Color.Khaki;
+            this.btn_reports.BackColor = System.Drawing.Color.DarkKhaki;
             this.btn_reports.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_reports.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reports.ForeColor = System.Drawing.Color.Black;
+            this.btn_reports.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reports.ForeColor = System.Drawing.Color.White;
             this.btn_reports.Location = new System.Drawing.Point(45, 642);
             this.btn_reports.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_reports.Name = "btn_reports";
@@ -55,11 +55,11 @@
             // 
             // btn_studentmanagement
             // 
-            this.btn_studentmanagement.BackColor = System.Drawing.Color.Khaki;
+            this.btn_studentmanagement.BackColor = System.Drawing.Color.DarkKhaki;
             this.btn_studentmanagement.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_studentmanagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_studentmanagement.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_studentmanagement.ForeColor = System.Drawing.Color.Black;
+            this.btn_studentmanagement.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_studentmanagement.ForeColor = System.Drawing.Color.White;
             this.btn_studentmanagement.Location = new System.Drawing.Point(45, 516);
             this.btn_studentmanagement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_studentmanagement.Name = "btn_studentmanagement";
@@ -71,11 +71,11 @@
             // 
             // btn_questionmanagement
             // 
-            this.btn_questionmanagement.BackColor = System.Drawing.Color.Khaki;
+            this.btn_questionmanagement.BackColor = System.Drawing.Color.DarkKhaki;
             this.btn_questionmanagement.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_questionmanagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_questionmanagement.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_questionmanagement.ForeColor = System.Drawing.Color.Black;
+            this.btn_questionmanagement.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_questionmanagement.ForeColor = System.Drawing.Color.White;
             this.btn_questionmanagement.Location = new System.Drawing.Point(45, 386);
             this.btn_questionmanagement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_questionmanagement.Name = "btn_questionmanagement";
@@ -87,11 +87,11 @@
             // 
             // btn_usermanagement
             // 
-            this.btn_usermanagement.BackColor = System.Drawing.Color.Khaki;
+            this.btn_usermanagement.BackColor = System.Drawing.Color.DarkKhaki;
             this.btn_usermanagement.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_usermanagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_usermanagement.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_usermanagement.ForeColor = System.Drawing.Color.Black;
+            this.btn_usermanagement.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_usermanagement.ForeColor = System.Drawing.Color.White;
             this.btn_usermanagement.Location = new System.Drawing.Point(45, 257);
             this.btn_usermanagement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_usermanagement.Name = "btn_usermanagement";
@@ -103,11 +103,11 @@
             // 
             // btn_dashboard
             // 
-            this.btn_dashboard.BackColor = System.Drawing.Color.Khaki;
+            this.btn_dashboard.BackColor = System.Drawing.Color.DarkKhaki;
             this.btn_dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_dashboard.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashboard.ForeColor = System.Drawing.Color.Black;
+            this.btn_dashboard.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashboard.ForeColor = System.Drawing.Color.Transparent;
             this.btn_dashboard.Location = new System.Drawing.Point(45, 140);
             this.btn_dashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_dashboard.Name = "btn_dashboard";
@@ -119,11 +119,11 @@
             // 
             // btn_logout
             // 
-            this.btn_logout.BackColor = System.Drawing.Color.Red;
+            this.btn_logout.BackColor = System.Drawing.Color.Maroon;
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logout.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(1678, 20);
+            this.btn_logout.Location = new System.Drawing.Point(1699, 20);
             this.btn_logout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(186, 65);

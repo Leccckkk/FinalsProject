@@ -75,7 +75,7 @@
             this.Txt_Status.Name = "Txt_Status";
             this.Txt_Status.Size = new System.Drawing.Size(274, 60);
             this.Txt_Status.TabIndex = 4;
-            this.Txt_Status.Text = "PASSED";
+            this.Txt_Status.Text = "Result";
             this.Txt_Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -104,12 +104,12 @@
             // 
             this.Txt_OverScore.Font = new System.Drawing.Font("Cascadia Code", 22F, System.Drawing.FontStyle.Bold);
             this.Txt_OverScore.ForeColor = System.Drawing.Color.OrangeRed;
-            this.Txt_OverScore.Location = new System.Drawing.Point(377, 64);
+            this.Txt_OverScore.Location = new System.Drawing.Point(380, 64);
             this.Txt_OverScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Txt_OverScore.Name = "Txt_OverScore";
             this.Txt_OverScore.Size = new System.Drawing.Size(183, 60);
             this.Txt_OverScore.TabIndex = 1;
-            this.Txt_OverScore.Text = "null%";
+            this.Txt_OverScore.Text = "0%";
             this.Txt_OverScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
@@ -137,47 +137,48 @@
             // 
             // txt_his
             // 
-            this.txt_his.Font = new System.Drawing.Font("Cascadia Code Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_his.Location = new System.Drawing.Point(1383, 195);
+            this.txt_his.Font = new System.Drawing.Font("Cascadia Code Light", 12F);
+            this.txt_his.Location = new System.Drawing.Point(1331, 198);
             this.txt_his.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_his.Name = "txt_his";
-            this.txt_his.Size = new System.Drawing.Size(225, 151);
+            this.txt_his.Size = new System.Drawing.Size(330, 111);
             this.txt_his.TabIndex = 16;
             this.txt_his.Text = "History";
             this.txt_his.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txt_sci
             // 
-            this.txt_sci.Font = new System.Drawing.Font("Cascadia Code Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_sci.Location = new System.Drawing.Point(978, 193);
+            this.txt_sci.Font = new System.Drawing.Font("Cascadia Code Light", 12F);
+            this.txt_sci.Location = new System.Drawing.Point(929, 197);
             this.txt_sci.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_sci.Name = "txt_sci";
-            this.txt_sci.Size = new System.Drawing.Size(225, 151);
+            this.txt_sci.Size = new System.Drawing.Size(330, 111);
             this.txt_sci.TabIndex = 15;
             this.txt_sci.Text = "Science";
             this.txt_sci.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txt_eng
             // 
-            this.txt_eng.Font = new System.Drawing.Font("Cascadia Code Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_eng.Location = new System.Drawing.Point(565, 196);
+            this.txt_eng.Font = new System.Drawing.Font("Cascadia Code Light", 12F);
+            this.txt_eng.Location = new System.Drawing.Point(524, 197);
             this.txt_eng.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_eng.Name = "txt_eng";
-            this.txt_eng.Size = new System.Drawing.Size(225, 151);
+            this.txt_eng.Size = new System.Drawing.Size(330, 111);
             this.txt_eng.TabIndex = 14;
             this.txt_eng.Text = "English";
             this.txt_eng.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txt_Math
             // 
-            this.txt_Math.Font = new System.Drawing.Font("Cascadia Code Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Math.Location = new System.Drawing.Point(58, 201);
+            this.txt_Math.Font = new System.Drawing.Font("Cascadia Code Light", 12F);
+            this.txt_Math.Location = new System.Drawing.Point(79, 199);
             this.txt_Math.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_Math.Name = "txt_Math";
-            this.txt_Math.Size = new System.Drawing.Size(356, 111);
+            this.txt_Math.Size = new System.Drawing.Size(330, 111);
             this.txt_Math.TabIndex = 13;
-            this.txt_Math.Text = "Mathematics";
+            this.txt_Math.Text = "Need improvements. Study more in this Subject.";
             this.txt_Math.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txt_Math.Click += new System.EventHandler(this.txt_Math_Click);
             // 
             // Txt_HisS
             // 

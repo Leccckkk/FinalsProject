@@ -83,6 +83,16 @@ namespace FinalsProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Faculty_Dashboard {
+            get {
+                object obj = ResourceManager.GetObject("Faculty Dashboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Login_Form {
             get {
                 object obj = ResourceManager.GetObject("Login Form", resourceCulture);
@@ -116,6 +126,16 @@ namespace FinalsProject.Properties {
         internal static System.Drawing.Bitmap student_dashoard {
             get {
                 object obj = ResourceManager.GetObject("student dashoard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap student_registration {
+            get {
+                object obj = ResourceManager.GetObject("student registration", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

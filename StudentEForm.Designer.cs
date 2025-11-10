@@ -38,7 +38,7 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.Location = new System.Drawing.Point(23, 183);
+            this.panelContainer.Location = new System.Drawing.Point(28, 183);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1872, 803);
@@ -61,11 +61,11 @@
             // 
             // btn_takeexam
             // 
-            this.btn_takeexam.BackColor = System.Drawing.Color.Green;
+            this.btn_takeexam.BackColor = System.Drawing.Color.DarkGreen;
             this.btn_takeexam.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_takeexam.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_takeexam.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_takeexam.ForeColor = System.Drawing.Color.Black;
+            this.btn_takeexam.Font = new System.Drawing.Font("Geoform", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_takeexam.ForeColor = System.Drawing.Color.White;
             this.btn_takeexam.Location = new System.Drawing.Point(241, 93);
             this.btn_takeexam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_takeexam.Name = "btn_takeexam";
@@ -77,11 +77,11 @@
             // 
             // btn_dashboard
             // 
-            this.btn_dashboard.BackColor = System.Drawing.Color.Gold;
+            this.btn_dashboard.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btn_dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_dashboard.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashboard.ForeColor = System.Drawing.Color.Black;
+            this.btn_dashboard.Font = new System.Drawing.Font("Geoform", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashboard.ForeColor = System.Drawing.Color.White;
             this.btn_dashboard.Location = new System.Drawing.Point(24, 93);
             this.btn_dashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_dashboard.Name = "btn_dashboard";
@@ -96,12 +96,12 @@
             this.btn_viewresults.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_viewresults.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_viewresults.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_viewresults.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_viewresults.Font = new System.Drawing.Font("Geoform", 10F, System.Drawing.FontStyle.Bold);
             this.btn_viewresults.ForeColor = System.Drawing.Color.White;
             this.btn_viewresults.Location = new System.Drawing.Point(461, 93);
             this.btn_viewresults.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_viewresults.Name = "btn_viewresults";
-            this.btn_viewresults.Size = new System.Drawing.Size(192, 63);
+            this.btn_viewresults.Size = new System.Drawing.Size(184, 63);
             this.btn_viewresults.TabIndex = 5;
             this.btn_viewresults.Text = "View Results";
             this.btn_viewresults.UseVisualStyleBackColor = false;

@@ -62,20 +62,20 @@
             // 
             // txtave
             // 
-            this.txtave.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
+            this.txtave.Font = new System.Drawing.Font("Cascadia Code", 14F, System.Drawing.FontStyle.Bold);
             this.txtave.ForeColor = System.Drawing.Color.Blue;
-            this.txtave.Location = new System.Drawing.Point(1155, 87);
+            this.txtave.Location = new System.Drawing.Point(1124, 64);
             this.txtave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtave.Name = "txtave";
-            this.txtave.Size = new System.Drawing.Size(104, 35);
+            this.txtave.Size = new System.Drawing.Size(178, 81);
             this.txtave.TabIndex = 13;
             this.txtave.Text = "0%";
             this.txtave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(1101, 48);
+            this.label6.Font = new System.Drawing.Font("Geoform", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1101, 23);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(224, 35);
@@ -85,20 +85,20 @@
             // 
             // txtfailed
             // 
-            this.txtfailed.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
+            this.txtfailed.Font = new System.Drawing.Font("Cascadia Code", 14F, System.Drawing.FontStyle.Bold);
             this.txtfailed.ForeColor = System.Drawing.Color.Red;
-            this.txtfailed.Location = new System.Drawing.Point(674, 87);
+            this.txtfailed.Location = new System.Drawing.Point(674, 63);
             this.txtfailed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtfailed.Name = "txtfailed";
-            this.txtfailed.Size = new System.Drawing.Size(75, 35);
+            this.txtfailed.Size = new System.Drawing.Size(75, 81);
             this.txtfailed.TabIndex = 11;
             this.txtfailed.Text = "1";
             this.txtfailed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(628, 48);
+            this.label4.Font = new System.Drawing.Font("Geoform", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(628, 28);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 35);
@@ -108,20 +108,20 @@
             // 
             // txtpassed
             // 
-            this.txtpassed.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
+            this.txtpassed.Font = new System.Drawing.Font("Cascadia Code", 14F, System.Drawing.FontStyle.Bold);
             this.txtpassed.ForeColor = System.Drawing.Color.Green;
-            this.txtpassed.Location = new System.Drawing.Point(171, 84);
+            this.txtpassed.Location = new System.Drawing.Point(171, 58);
             this.txtpassed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtpassed.Name = "txtpassed";
-            this.txtpassed.Size = new System.Drawing.Size(75, 35);
+            this.txtpassed.Size = new System.Drawing.Size(75, 81);
             this.txtpassed.TabIndex = 8;
             this.txtpassed.Text = "1";
             this.txtpassed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(126, 48);
+            this.label1.Font = new System.Drawing.Font("Geoform", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 35);

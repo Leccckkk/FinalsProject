@@ -36,6 +36,17 @@ namespace FinalsProject
             txt_Number.Text = Convert.ToString(Number) + ".";
             LoadQuestion();
         }
+
+        private void txt_subject_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_point_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void LoadQuestion()
         {
             string dbconnect = "SERVER=localhost; database=dbfinals; uid=root";
