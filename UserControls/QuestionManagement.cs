@@ -20,6 +20,7 @@ namespace FinalsProject.UserControls
         
         private void QuestionManagement_Load(object sender, EventArgs e)
         {
+            cb_sub.SelectedIndex = 0;
             LoadGrid();
             LoadSubjectCounts();
             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;

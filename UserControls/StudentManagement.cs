@@ -46,6 +46,7 @@ namespace FinalsProject.UserControls
 
         private void StudentManagement_Load(object sender, EventArgs e)
         {
+            
             LoadGrid();
         }
 
