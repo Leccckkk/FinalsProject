@@ -16,6 +16,7 @@ namespace FinalsProject
 {
     internal class Methods
     {
+
     }
 }
 
@@ -478,4 +479,50 @@ public static class Evaluate
         else
             return ("Needs improvement. Study more on this subject.");
     }
+}
+
+public class ScoreSummary
+{
+    public static void LoadChart(Chart chart)
+    {
+        string dbconnect = "SERVER=localhost; database=dbfinals; uid=root;";
+        using (MySqlConnection sqlconnection = new MySqlConnection(dbconnect))
+        {
+            try
+            {
+                sqlconnection.Open();
+                string query = @"
+                SELECT 'Mathematics' AS Subject, AVG(MathScore) AS AvgScore FROM tbl_studentscores
+                UNION ALL
+                SELECT 'English' AS Subject, AVG(EngScore) AS AvgScore FROM tbl_studentscores
+                UNION ALL
+                SELECT 'Science' AS Subject, AVG(SciScore) AS AvgScore FROM tbl_studentscores
+                UNION ALL
+                SELECT 'History' AS Subject, AVG(HisScore) AS AvgScore FROM tbl_studentscores;
+            ";
+
+                MySqlCommand sqlcmd = new MySqlCommand(query, sqlconnection);
+                MySqlDataReader sqlreader = sqlcmd.ExecuteReader();
+                chart.Series.Clear();
+                Series series = new Series("Average Score per Subject");
+                series.ChartType = SeriesChartType.Column;
+                series.IsValueShownAsLabel = true;
+                chart.Series.Add(series);
+                while (sqlreader.Read())
+                {
+                    string subject = sqlreader["Subject"].ToString();
+                    double avgScore = Convert.ToDouble(sqlreader["AvgScore"]);
+                    if (avgScore > 25)
+                        avgScore = 25;
+                    series.Points.AddXY(subject, avgScore);
+                    chart.ChartAreas[0].AxisY.Maximum = 25;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading chart data: " + ex.Message);
+            }
+        }
+    }
+
 }

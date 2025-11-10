@@ -57,6 +57,12 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FacultyControls\Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FacultyControls\Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacultyControls\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +165,9 @@
     </Compile>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultyControls\Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacultyControls\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -194,6 +209,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>

@@ -77,5 +77,10 @@ namespace FinalsProject
         {
 
         }
+
+        private void btn_chart_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new Chart());
+        }
     }
 }
