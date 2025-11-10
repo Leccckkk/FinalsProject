@@ -69,5 +69,10 @@ namespace FinalsProject.StudentControls
 
             sqlconnection.Close();
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
