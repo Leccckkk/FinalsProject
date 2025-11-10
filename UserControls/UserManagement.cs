@@ -89,5 +89,11 @@ namespace FinalsProject.UserControls
             }
         }
 
+        private void tb_User_TextChanged(object sender, EventArgs e)
+        {
+            dt = UserManager.LoadUsers2(tb_User.Text);
+            dataGridView1.DataSource = dt;
+        }
+
     }
 }

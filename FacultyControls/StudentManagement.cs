@@ -29,13 +29,19 @@ namespace FinalsProject.FacultyControls
         }
         private void LoadGrid()
         {
-            dt = UserManager.LoadStudents();
+            dt = UserManager.LoadStudents(tb_User.Text);
             dataGridView1.DataSource = dt;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void tb_User_TextChanged(object sender, EventArgs e)
+        {
+            dt = UserManager.LoadStudents(tb_User.Text);
+            dataGridView1.DataSource = dt;
         }
     }
 }

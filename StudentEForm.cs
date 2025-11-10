@@ -67,7 +67,35 @@ namespace FinalsProject
                 {
                     btn_takeexam.Visible = true;
                 }
+
+                string queryEnroll = "SELECT EnrollmentStatus FROM tbl_users WHERE Username = @user";
+                MySqlCommand enrollCmd = new MySqlCommand(queryEnroll, sqlconnection);
+                enrollCmd.Parameters.AddWithValue("@user", GlobalDataa.UserName);
+
+                object result = enrollCmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    string status = result.ToString();
+
+                    if (status == "Enrolled")
+                    {
+                        btn_takeexam.Visible = true;
+                        txt_EnrollmentStatus.Text = "";
+
+                    }
+                    else if (status == "Not Enrolled")
+                    {
+                        btn_takeexam.Visible = false;
+                        txt_EnrollmentStatus.Text = "NOT ENROLLED!!!";
+                    }
+                }
+                else
+                {
+                    btn_takeexam.Visible = false;
+                }
             }
+
         }
 
         private void btn_results_Click(object sender, EventArgs e)

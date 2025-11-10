@@ -78,34 +78,7 @@ public class register
     }
 }
 
-public class ShowQuestions
-{
-    public static void Questions(int Number,  string Subject)
-    {
-        if (Number <= 10)
-        {
-            string dbconnect = "SERVER=localhost; database=dbactivity; uid=root";
-            MySqlConnection sqlconnection = new MySqlConnection(dbconnect);
-            MySqlCommand sqlcmd = new MySqlCommand();
-            MySqlDataReader sqlreader;
 
-
-
-
-            sqlconnection.Open();
-
-            sqlcmd.CommandText = $"SELECT * FROM Tbl_question WHERE number = '{Number}' AND subject = '{Subject}'";
-            sqlcmd.CommandType = CommandType.Text;
-            sqlcmd.Connection = sqlconnection;
-
-            sqlreader = sqlcmd.ExecuteReader();
-
-            
-
-            sqlconnection.Close();
-        }
-    }
-}
 
 public static class QuestionManager
 {
@@ -223,7 +196,7 @@ public static class UserManager
 
         return dt;
     }
-    public static DataTable LoadStudents()
+    public static DataTable LoadUsers2(string user)
     {
         DataTable dt = new DataTable();
 
@@ -232,30 +205,70 @@ public static class UserManager
             conn.Open();
 
             string query = @"
-            SELECT 
-                u.name,
-                s.MathScore,
-                s.EngScore,
-                s.SciScore,
-                s.HisScore,
-                s.SumScore,
-                COALESCE(s.Status, 'Not Taken') AS Status,
-                s.Average
-            FROM tbl_users u
-            LEFT JOIN tbl_studentscores s 
-                ON u.Username = s.Username
-            WHERE u.userType = 'student'
-            ORDER BY s.Average DESC, u.name;
+            SELECT *
+            FROM tbl_users
+            WHERE Username LIKE @user
+               OR student_number LIKE @user
+               OR name LIKE @user;
         ";
 
-            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
             {
-                adapter.Fill(dt);
+                cmd.Parameters.AddWithValue("@user", "%" + user + "%");
+
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                {
+                    adapter.Fill(dt);
+                }
             }
         }
 
         return dt;
     }
+
+
+    public static DataTable LoadStudents(string username)
+    {
+        DataTable dt = new DataTable();
+
+        using (MySqlConnection conn = new MySqlConnection(connStr))
+        {
+            conn.Open();
+
+            string query = @"
+        SELECT 
+            u.name,
+            u.EnrollmentStatus,
+            s.MathScore,
+            s.EngScore,
+            s.SciScore,
+            s.HisScore,
+            s.SumScore,
+            COALESCE(s.Status, 'Not Taken') AS Status,
+            s.Average
+        FROM tbl_users u
+        LEFT JOIN tbl_studentscores s 
+            ON u.Username = s.Username
+        WHERE u.userType = 'student'
+          AND u.Username LIKE @Username
+        ORDER BY s.Average DESC, u.name;
+        ";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Username", "%" + username + "%");
+
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                {
+                    adapter.Fill(dt);
+                }
+            }
+        }
+
+        return dt;
+    }
+
+
     public static DataTable LoadStudents2()
     {
         DataTable dt = new DataTable();

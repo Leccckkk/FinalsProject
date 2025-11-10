@@ -21,7 +21,7 @@ namespace FinalsProject.UserControls
 
         private void LoadGrid()
         {
-            dt = UserManager.LoadStudents();
+            dt = UserManager.LoadStudents(tb_User.Text);
             dataGridView1.DataSource = dt;
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,6 +89,12 @@ namespace FinalsProject.UserControls
             {
                 MessageBox.Show("Error deleting record: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tb_User_TextChanged(object sender, EventArgs e)
+        {
+            dt = UserManager.LoadStudents(tb_User.Text);
+            dataGridView1.DataSource = dt;
         }
     }
     }
