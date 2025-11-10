@@ -228,5 +228,17 @@
   <ItemGroup>
     <None Include="Resources\Dashboard Form.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Form1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_LOGIN FORM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Form2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

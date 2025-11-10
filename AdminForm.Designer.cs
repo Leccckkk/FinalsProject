@@ -137,7 +137,7 @@
             this.panelContainer.Location = new System.Drawing.Point(398, 101);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1540, 1050);
+            this.panelContainer.Size = new System.Drawing.Size(1570, 1080);
             this.panelContainer.TabIndex = 3;
             this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
