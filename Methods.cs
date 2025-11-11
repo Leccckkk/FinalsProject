@@ -321,7 +321,6 @@ public static class UserManager
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 conn.Open();
-
                 string query = "SELECT * FROM tbl_users";
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
                 {
@@ -338,18 +337,31 @@ public static class UserManager
                         string username = row["Username"]?.ToString().Trim() ?? "";
                         string name = row["name"]?.ToString().Trim() ?? "";
                         string email = row["email"]?.ToString().Trim() ?? "";
-                        if (studentNumber.Length != 11 || !studentNumber.All(char.IsDigit))
-                        {
-                            MessageBox.Show($"Invalid student number '{studentNumber}'. Must contain exactly 11 digits.",
-                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        string[] validUserTypes = { "Student", "Teacher", "Admin" };
+                        string[] validUserTypes = { "student", "faculty", "admin" };
                         if (!validUserTypes.Contains(userType))
                         {
                             MessageBox.Show($"Invalid user type '{userType}'. Must be one of: {string.Join(", ", validUserTypes)}.",
                                 "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
+                        }
+                        if (userType == "student")
+                        {
+                            if (string.IsNullOrEmpty(studentNumber))
+                            {
+                                MessageBox.Show(
+                                    $"student number is required for user type 'student'.",
+                                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error
+                                );
+                                return;
+                            }
+                            if (studentNumber.Length != 11 || !studentNumber.All(char.IsDigit))
+                            {
+                                MessageBox.Show(
+                                    $"Invalid student number '{studentNumber}'. Must contain exactly 11 digits.",
+                                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error
+                                );
+                                return;
+                            }
                         }
                         if (!username.All(char.IsLetter))
                         {
