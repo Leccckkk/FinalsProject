@@ -24,7 +24,6 @@ public class Login
 {
     public static string CheckLogin(string Username, string password)
     {
-        
         string dbconnect = "SERVER=localhost; database=dbfinals; uid=root";
         MySqlConnection sqlconnection = new MySqlConnection(dbconnect);
         MySqlCommand sqlcmd = new MySqlCommand();
@@ -48,8 +47,6 @@ public class Login
                 }
             }
         }
-        
-
             sqlconnection.Close();
         return "Invalid";
     }  
@@ -319,19 +316,75 @@ public static class UserManager
     }
     public static void SaveChanges(DataTable dt)
     {
-        using (MySqlConnection conn = new MySqlConnection(connStr))
+        try
         {
-            conn.Open();
-            string query = "SELECT * FROM tbl_users";
-            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+            using (MySqlConnection conn = new MySqlConnection(connStr))
             {
-                MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
-                adapter.UpdateCommand = builder.GetUpdateCommand();
-                adapter.InsertCommand = builder.GetInsertCommand();
-                adapter.DeleteCommand = builder.GetDeleteCommand();
+                conn.Open();
 
-                adapter.Update(dt);
+                string query = "SELECT * FROM tbl_users";
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+                {
+                    MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
+                    adapter.UpdateCommand = builder.GetUpdateCommand();
+                    adapter.InsertCommand = builder.GetInsertCommand();
+                    adapter.DeleteCommand = builder.GetDeleteCommand();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (row.RowState == DataRowState.Deleted)
+                            continue;
+                        string studentNumber = row["student_number"]?.ToString().Trim() ?? "";
+                        string userType = row["userType"]?.ToString().Trim() ?? "";
+                        string username = row["Username"]?.ToString().Trim() ?? "";
+                        string name = row["name"]?.ToString().Trim() ?? "";
+                        string email = row["email"]?.ToString().Trim() ?? "";
+                        if (studentNumber.Length != 11 || !studentNumber.All(char.IsDigit))
+                        {
+                            MessageBox.Show($"Invalid student number '{studentNumber}'. Must contain exactly 11 digits.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        string[] validUserTypes = { "Student", "Teacher", "Admin" };
+                        if (!validUserTypes.Contains(userType))
+                        {
+                            MessageBox.Show($"Invalid user type '{userType}'. Must be one of: {string.Join(", ", validUserTypes)}.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        if (!username.All(char.IsLetter))
+                        {
+                            MessageBox.Show($"Invalid username '{username}'. Only letters are allowed.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        if (!name.All(c => char.IsLetter(c) || c == ' '))
+                        {
+                            MessageBox.Show($"Invalid name '{name}'. Only letters and spaces are allowed.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        if (!email.Contains("@") || !email.EndsWith(".com"))
+                        {
+                            MessageBox.Show($"Invalid email '{email}'. Must contain '@' and end with '.com'.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    adapter.Update(dt);
+                    MessageBox.Show("Changes saved successfully.",
+                        "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+        }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show($"Database Error: {ex.Message}",
+                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Unexpected Error: {ex.Message}",
+                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
     public static void SaveStudentScores(DataTable dt)

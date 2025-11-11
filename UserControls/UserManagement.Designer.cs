@@ -136,6 +136,7 @@
             this.label2.Size = new System.Drawing.Size(479, 38);
             this.label2.TabIndex = 14;
             this.label2.Text = "USER MANAGEMENT";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // UserManagement
             // 

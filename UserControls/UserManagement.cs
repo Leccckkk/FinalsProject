@@ -46,7 +46,6 @@ namespace FinalsProject.UserControls
         private void btn_save_Click(object sender, EventArgs e)
         {
             UserManager.SaveChanges(dt);
-            MessageBox.Show("Changes saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadGrid();
         }
 
@@ -95,5 +94,9 @@ namespace FinalsProject.UserControls
             dataGridView1.DataSource = dt;
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
