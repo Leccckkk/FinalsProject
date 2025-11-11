@@ -61,11 +61,9 @@ namespace FinalsProject
                 int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
                 if (count > 0)
                 {
-                    btn_takeexam.Visible = false; 
-                }
-                else
-                {
-                    btn_takeexam.Visible = true;
+                    btn_takeexam.Visible = false;
+                    txt_EnrollmentStatus.Text = "EXAM ALREADY TAKEN";
+                    return;
                 }
 
                 string queryEnroll = "SELECT EnrollmentStatus FROM tbl_users WHERE Username = @user";
@@ -97,6 +95,8 @@ namespace FinalsProject
             }
 
         }
+        
+
 
         private void btn_results_Click(object sender, EventArgs e)
         {
