@@ -38,10 +38,9 @@
             this.btn_Login.BackColor = System.Drawing.Color.Gold;
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Login.Font = new System.Drawing.Font("Segoe UI Symbol", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Location = new System.Drawing.Point(847, 454);
-            this.btn_Login.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Login.Location = new System.Drawing.Point(565, 295);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(112, 35);
+            this.btn_Login.Size = new System.Drawing.Size(75, 23);
             this.btn_Login.TabIndex = 6;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = false;
@@ -53,10 +52,9 @@
             this.tb_Username.BackColor = System.Drawing.Color.Gold;
             this.tb_Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tb_Username.Location = new System.Drawing.Point(738, 319);
-            this.tb_Username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Username.Location = new System.Drawing.Point(492, 207);
             this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(329, 23);
+            this.tb_Username.Size = new System.Drawing.Size(219, 16);
             this.tb_Username.TabIndex = 1;
             // 
             // tb_Password
@@ -64,23 +62,22 @@
             this.tb_Password.BackColor = System.Drawing.Color.Gold;
             this.tb_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tb_Password.Location = new System.Drawing.Point(738, 399);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Password.Location = new System.Drawing.Point(492, 259);
             this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(329, 23);
+            this.tb_Password.Size = new System.Drawing.Size(219, 16);
             this.tb_Password.TabIndex = 3;
+            this.tb_Password.UseSystemPasswordChar = true;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FinalsProject.Properties.Resources.Login_Form2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1278, 689);
+            this.ClientSize = new System.Drawing.Size(852, 448);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.tb_Username);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
